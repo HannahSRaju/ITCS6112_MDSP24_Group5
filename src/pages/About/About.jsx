@@ -42,6 +42,11 @@ const About = () => {
 				</span>
 				<span>Capture and write in tasks to remind you later on.</span>
 			</section>
+
+			<section className="about-body">
+				<span>Testing - Hannah Raju.</span>
+			</section>
+
 		</main>
 	);
 };
