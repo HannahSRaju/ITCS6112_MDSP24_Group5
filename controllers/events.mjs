@@ -30,8 +30,8 @@ const getEvent = async (req, res) => {
 };
 
 const addEvent = async (req, res) => {
-	const { title, description, type, link, date, time } = req.body;
-	if (!title || !description || !type || !date || !time)
+	const { title, description, type, link, date, time, hasPhotographer, photographerInfo } = req.body;
+	if (!title || !description || !type || !date || !time || !hasPhotographer)
 		return res.status(400).json({ message: "Invalid Data" });
 	try {
 		const newEvent = new Event({
@@ -42,6 +42,8 @@ const addEvent = async (req, res) => {
 			link,
 			date,
 			time,
+			hasPhotographer,
+			photographerInfo: hasPhotographer ? photographerInfo : undefined,
 		});
 		const event = await newEvent.save();
 		return res

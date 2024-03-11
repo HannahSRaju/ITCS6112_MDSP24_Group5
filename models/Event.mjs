@@ -30,6 +30,24 @@ const EventSchema = new mongoose.Schema(
 			type: String,
 			default: `${a.getHours()}:${a.getMinutes()}:${a.getSeconds()}`,
 		},
+		hasPhotographer: {
+			type: Boolean,
+			default: false,
+		}, 
+		photographerInfo: {
+			name: {
+				type: String,
+			},
+			contact: {
+				type: String,
+			},
+			price: {
+				type: String,
+			},
+			style: {
+				type: String,
+			},
+		},
 		trashed: {
 			type: Boolean,
 			default: false,
