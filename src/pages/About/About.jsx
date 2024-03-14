@@ -19,8 +19,8 @@ const About = () => {
 			</section>
 			<section className="about-body">
 				<span>
-					Planner is a web application to help the user to help them
-					record their everyday events, activities and tasks.
+					Event Planner is a web application to help users plan the best
+					events possible.
 				</span>
 			</section>
 			<section className="about-body">
