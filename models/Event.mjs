@@ -47,7 +47,14 @@ const EventSchema = new mongoose.Schema(
 			style: {
 				type: String,
 			},
+			location: {
+				type: String,
+			},
+			webpage: {
+				type: String,
+			},
 		},
+		
 		trashed: {
 			type: Boolean,
 			default: false,
