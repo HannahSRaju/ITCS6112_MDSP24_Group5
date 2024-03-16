@@ -10,19 +10,20 @@ const About = () => {
 					<img src={favicon} alt="Planner" />
 				</div>
 				<div className="about-head-content">
-					<span className="about-head-content__title">Planner</span>
+					<span className="about-head-content__title">Event Planner</span>
 					<span className="about-head-content__p">
-						Get more done with Planner. Manage, capture and edit
-						your daily events, notes and tasks.
+						Get more done with Event Planner. Event planning made effortless.
 					</span>
 				</div>
 			</section>
 			<section className="about-body">
 				<span>
-					Planner is a web application to help the user to help them
-					record their everyday events, activities and tasks.
+					Event Planner is a web application to help users plan the best
+					events possible.
 				</span>
 			</section>
+			
+			{/*
 			<section className="about-body">
 				<span>
 					Organize your Calendar, events, notes and tasks with
@@ -42,10 +43,7 @@ const About = () => {
 				</span>
 				<span>Capture and write in tasks to remind you later on.</span>
 			</section>
-
-			<section className="about-body">
-				<span>Testing - Hannah Raju.</span>
-			</section>
+			*/}
 
 		</main>
 	);
