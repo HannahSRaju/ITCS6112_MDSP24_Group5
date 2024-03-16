@@ -103,47 +103,17 @@ const Footer = () => {
 				backgroundImage: `url(${
 					waves[accentColor][theme === "light" ? 0 : 1]
 				})`,
+				backgroundColor: "lavender"
 			}}
 		>
-			<div className="footer-left">
-				<div className="footer-left-container">
-					<img
-						className="footer-left-logo"
-						src={favicon}
-						alt="Planner favicon"
-						style={{
-							width: `${r + 2}rem`,
-							height: `${r + 2}rem`,
-							animation: imgClicked
-								? "none"
-								: "zoom 1.5s linear infinite",
-						}}
-						onClick={() => setImgClicked((prev) => !prev)}
-					/>
-					<div className="footer-left-socials">
-						{socials.map((social, index) => (
-							<a
-								href={social.link}
-								key={index}
-								className="footer-left-social"
-								title={social.username}
-								style={{
-									transform: imgClicked && pos(social.angle),
-								}}
-								target="_blank"
-								rel="noreferrer"
-							>
-								{social.icon}
-							</a>
-						))}
-					</div>
-				</div>
-			</div>
-			<div className="footer-right">
-				<div className="footer-right-feedback">
-					<h2>Contact Us</h2>
+			<div className="footer-center">
+				<div className="footer-center-feedback">
+					<h2 style={{
+						color: 'darkcyan',
+						fontSize: 'xx-large'
+					}}> How can we help? Contact Us </h2>
 					<form
-						className="footer-right-form"
+						className="footer-center-form"
 						onReset={handleReset}
 						onSubmit={handleSubmit}
 					>

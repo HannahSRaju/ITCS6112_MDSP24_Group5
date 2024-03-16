@@ -5,7 +5,7 @@ import LinkButton from "../../components/Button/LinkButton";
 import routes from "../../routes";
 import defaultNavLinks from "../../utils/navigation";
 import GlobalContext from "../../Context/GlobalContext";
-import favicon, { peopleImg } from "../../utils/images";
+import favicon, { eventImg } from "../../utils/images";
 
 const Home = () => {
 	const [scrolled, setScrolled] = useState(false);
@@ -27,46 +27,41 @@ const Home = () => {
 			<div className="card">
 				<div
 					className="card-frame"
-					style={{
-						padding: scrolled
-							? "0"
-							: breakpoint("mobile")
-							? "0.5rem 0.65rem"
-							: "0.5rem 0.25rem",
-					}}
 					data-aos="fade-in"
 					data-aos-duration={2000}
 				>
 					<div
 						className="card-box"
-						style={{
-							width: !scrolled ? "99%" : "100%",
-							height: !scrolled ? "99%" : "100%",
-						}}
 					>
+						<div className="home-box-title">
+								<span className="home-box-title__text">
+									<h4 style={{textAlign : 'center',
+    								marginBottom: '2rem',
+									fontStyle: 'cursive',
+									color: 'red'}}>
+										Welcome to</h4>
+										{routes.map((route, index) => (
+										<LinkButton to={route.route}>
+										<span style={{textDecoration : 'underline'}}>Online Event Planner </span>
+									</LinkButton>
+										))}
+								</span>
+							</div>
 						<div className="home-box-head" data-aos="zoom-out">
 							<div
 								className="home-box-image"
 								style={{
-									backgroundImage: `url(${peopleImg})`,
+									backgroundImage: `url(${eventImg})`,
 								}}
 							>
-								<img
-									className="home-box-image__img"
-									src={favicon}
-									alt="favicon"
-								/>
+							
 							</div>
-							<div className="home-box-title">
-								<span className="home-box-title__text">
-									Planner
-								</span>
-							</div>
+							
 						</div>
 					</div>
 				</div>
 			</div>
-			<div className="home-navigation">
+			{/* <div className="home-navigation">
 				<div className="row">
 					{routes.map((route, index) => (
 						<div
@@ -110,7 +105,7 @@ const Home = () => {
 						</div>
 					))}
 				</div>
-			</div>
+			</div> */}
 		</main>
 	);
 };

@@ -2,6 +2,8 @@ import favicon from "../images/favicon.svg";
 
 import userFallBackImg from "../images/user.svg";
 import peopleImg from "../images/people.svg";
+import eventImg from "../images/event-plan.jpg";
+
 import registerBg from "../images/register-bg.jpg";
 import loginBg from "../images/login-bg.jpeg";
 import bricks from "../images/brick.svg";
@@ -102,4 +104,5 @@ export {
 	tourist,
 	blueSky,
 	IconMask,
+	eventImg
 };

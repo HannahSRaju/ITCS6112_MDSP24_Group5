@@ -1,6 +1,5 @@
 .footer {
   width: 100vw;
-  height: 70vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: center;
@@ -67,8 +66,9 @@
 .footer-left-social:hover {
   background-color: var(--indigo-700);
 }
-.footer-right {
-  width: 60%;
+.footer-center {
+  width: 100%;
+  margin: 2em
 }
 @media (max-width: 672px) {
   .footer-right {
