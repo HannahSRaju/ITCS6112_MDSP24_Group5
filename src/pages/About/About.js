@@ -43,9 +43,9 @@ const About = () => {
 				</span>
 				<span>Capture and write in tasks to remind you later on.</span>
 			</section>
-			**/}
+  */}
 		</main>
 	);
 };
 
-export default About; 
+export default About;
