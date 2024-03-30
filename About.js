@@ -2,6 +2,7 @@ import React from "react";
 import favicon from "../../utils/images";
 import { catererData } from 'Caterers.mjs'; // Assuming Caterers.mjs provides catererData
 import "./about.css";
+console.log("catererData: ", catererData);
 /** const About = () => {
     return (
         <main className="about">

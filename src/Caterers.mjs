@@ -12,6 +12,7 @@ async function getAllCaterers() {
       headers: {
         'Content-Type': 'application/json',
         //'Access-Control-Request-Headers': '*',
+        'Access-Control-Allow-Origin': '*',
         'api-key': '0axBoFkZid887XCA132P9L4Rxd5JboXlqLgythfWtazWxpk8iT7GBTdIpo7BcIuO'
       }
     });
