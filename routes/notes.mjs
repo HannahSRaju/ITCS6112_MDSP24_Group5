@@ -20,12 +20,19 @@ import {
 } from "../controllers/notes.mjs";
 import auth from "../middleware/auth.mjs";
 
+import catererData from "../controllers/caterers.mjs";
+
+
 const router = Router();
 
 router.use(auth);
 
+router.get("/", catererData);
+console.log(catererData);
+
 // Notes
 
+router.get("/", getAllNotes);
 router.get("/", getAllNotes);
 
 // Lists

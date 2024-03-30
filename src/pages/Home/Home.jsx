@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+/**import React, { useContext, useEffect, useState } from "react";
 import "./home.css";
 import MaterialIcons from "../../components/MaterialIcons";
 import LinkButton from "../../components/Button/LinkButton";
@@ -6,7 +6,7 @@ import routes from "../../routes";
 import defaultNavLinks from "../../utils/navigation";
 import GlobalContext from "../../Context/GlobalContext";
 import favicon, { eventImg } from "../../utils/images";
-import { catererData } from "../../Caterers.mjs"; // Import catererData from Caterers.mjs
+//import { catererData } from "../../../controllers/caterers.mjs"; // Import catererData from Caterers.mjs
 
 const Home = () => {
   console.log("catererData: ", catererData)
@@ -63,11 +63,11 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home;*/
 
 
 
-/** import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./home.css";
 import MaterialIcons from "../../components/MaterialIcons";
 import LinkButton from "../../components/Button/LinkButton";
@@ -108,7 +108,7 @@ const Home = () => {
     								marginBottom: '2rem',
 									fontStyle: 'cursive',
 									color: 'red'}}>
-										Welcome to {catererData}</h4>
+										Welcome to</h4>
 										{routes.map((route, index) => (
 										<LinkButton to={route.route}>
 										<span style={{textDecoration : 'underline'}}>Online Event Planner </span>
@@ -174,9 +174,9 @@ const Home = () => {
 						</div>
 					))}
 				</div>
-			</div> /*}
+								</div> */}
 		</main>
 	);
 };
 
-export default Home;*/
+export default Home;
