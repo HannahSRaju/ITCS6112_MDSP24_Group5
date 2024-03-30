@@ -57,9 +57,6 @@ const Events = () => {
 					<section className="events-body">
 						{eventsToRender?.map((element, index) => (
 							<div className="events-body-section" key={index}>
-								<span className="events-body-section__head">
-									{element?.month}
-								</span>
 								<div className="events-body-section__body">
 									<Row>
 										{element?.eventsOfMonth?.map(

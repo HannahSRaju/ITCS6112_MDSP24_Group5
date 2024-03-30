@@ -6,6 +6,7 @@ import MaterialIcons from "../../components/MaterialIcons";
 import GlobalContext from "../../Context/GlobalContext";
 import Popup from "../../Layout/Popup/Popup";
 import EventPopup from "./EventPopup";
+import { oneBgImg, eventImg } from "../../utils/images";
 
 const Event = ({
 	title,
@@ -47,7 +48,7 @@ const Event = ({
 				return "purple";
 			case "ceremony":
 				return "green";
-			default:
+default:
 				return "bgcolor";
 		}
 	};
@@ -72,18 +73,15 @@ const Event = ({
 	return (
 		<div
 			className="events-body-event event"
-			style={{
-				backgroundColor: `var(--${getColor(type)}-${
-					theme === "light" ? "100" : "700"
-				})`,
-			}}
+			// style={{
+			// 	backgroundImage: `url(${oneBgImg})`,
+			// 	backgroundSize: 'cover', // Ensures the background covers the div area
+            // backgroundPosition: 'center', // Centers the background image
+            // width: '100%', // Or any specific size
+            // height: '200px', // Or any specific size
+			// }}
 		>
-			<div
-				className="event__icon"
-				onClick={() => setOpenEventPopup(true)}
-			>
-				<MaterialIcons>{showIcon(type)}</MaterialIcons>
-			</div>
+			<img src={oneBgImg} />
 			<div className="event-details">
 				<div
 					className="event-details__title"
@@ -91,13 +89,13 @@ const Event = ({
 				>
 					{title}
 				</div>
-				<div
+				{/* <div
 					className="event-details__date"
 					onClick={() => setOpenEventPopup(true)}
 				>
 					{moment(date).format("YYYY-MMM-DD")}
-				</div>
-				<div className="event-details__delete">
+				</div> */}
+				{/* <div className="event-details__delete">
 					{trashed ? (
 						<>
 							<IconButton
@@ -191,7 +189,7 @@ const Event = ({
 							}}
 						/>
 					)}
-				</div>
+				</div> */}
 			</div>
 			{openEventPopup && (
 				<EventPopup

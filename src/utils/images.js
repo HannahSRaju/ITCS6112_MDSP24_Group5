@@ -3,11 +3,11 @@ import favicon from "../images/favicon.svg";
 import userFallBackImg from "../images/user.svg";
 import peopleImg from "../images/people.svg";
 import eventImg from "../images/event-plan.jpg";
+import oneBgImg from "../images/weddingBG.jpg";
 
 import registerBg from "../images/register-bg.jpg";
 import loginBg from "../images/login-bg.jpeg";
 import bricks from "../images/brick.svg";
-
 import calendarPoster from "../images/posters/calendar-poster.jpg";
 import eventsPoster from "../images/posters/events-poster.jpg";
 import notesPoster from "../images/posters/notes-poster.jpg";
@@ -104,5 +104,6 @@ export {
 	tourist,
 	blueSky,
 	IconMask,
-	eventImg
+	eventImg,
+	oneBgImg
 };

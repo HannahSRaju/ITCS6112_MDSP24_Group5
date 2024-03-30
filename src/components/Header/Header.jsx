@@ -77,7 +77,7 @@ const Header = () => {
 					</button>
 				</div>
 				<Link to="/" className="header-left-logo">
-					Planner
+					Event Planning Application
 				</Link>
 			</div>
 			<div className="header-right">
