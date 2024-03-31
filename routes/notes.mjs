@@ -20,15 +20,12 @@ import {
 } from "../controllers/notes.mjs";
 import auth from "../middleware/auth.mjs";
 
-import catererData from "../controllers/caterers.mjs";
+import { catererData } from "../src/caterers.mjs";
 
 
 const router = Router();
 
 router.use(auth);
-
-router.get("/", catererData);
-console.log(catererData);
 
 // Notes
 
@@ -56,5 +53,9 @@ router.put("/unarchive/:id", unArchiveNote);
 router.put("/trash/:id", moveNoteToTrash);
 router.put("/restore/:id", restoreNoteFromTrash);
 router.delete("/delete/:id", deleteNote);
+
+router.get(catererData);
+router.put(catererData);
+//console.log('catererData: ', catererData); // This will show the data on bash terminal
 
 export default router;

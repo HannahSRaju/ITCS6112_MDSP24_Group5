@@ -1,6 +1,7 @@
 import { createContext } from "react";
 
 const GlobalContext = createContext({
+	catererData: "",
 	theme: "",
 	setTheme: () => {},
 	toggleTheme: () => {},

@@ -1,4 +1,4 @@
-/**import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./home.css";
 import MaterialIcons from "../../components/MaterialIcons";
 import LinkButton from "../../components/Button/LinkButton";
@@ -6,7 +6,7 @@ import routes from "../../routes";
 import defaultNavLinks from "../../utils/navigation";
 import GlobalContext from "../../Context/GlobalContext";
 import favicon, { eventImg } from "../../utils/images";
-//import { catererData } from "../../../controllers/caterers.mjs"; // Import catererData from Caterers.mjs
+import { catererData } from "./Caterers.mjs"; // Import catererData from Caterers.mjs
 
 const Home = () => {
   console.log("catererData: ", catererData)
@@ -47,7 +47,7 @@ const Home = () => {
       <div className="caterer-list">
         <h2>Caterers</h2>
         <ul>
-          {catererData.map(caterer => (
+          {catererData.map(caterer => ( // calling catererData to display on Home page
             <li key={caterer._id}>
               <h3>{caterer.CatererName}</h3>
               <p>Location: {caterer.Location}</p>
@@ -63,11 +63,11 @@ const Home = () => {
   );
 };
 
-export default Home;*/
+export default Home;
 
 
 
-import React, { useContext, useEffect, useState } from "react";
+/**import React, { useContext, useEffect, useState } from "react";
 import "./home.css";
 import MaterialIcons from "../../components/MaterialIcons";
 import LinkButton from "../../components/Button/LinkButton";
@@ -79,7 +79,7 @@ import favicon, { eventImg } from "../../utils/images";
 const Home = () => {
 	const [scrolled, setScrolled] = useState(false);
 	const vh = window.innerHeight / 100;
-	const { theme, setSideBarLinks, breakpoint } = useContext(GlobalContext);
+	const { theme, setSideBarLinks, breakpoint, catererData } = useContext(GlobalContext);
 	useEffect(() => {
 		document.addEventListener("scroll", () => {
 			if (window.scrollY > 25 * vh) setScrolled(true);
@@ -130,6 +130,21 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
+			{/*<div className="caterer-list">
+				<h2>Caterers</h2>
+				<ul>
+				{catererData.map(caterer => (
+					<li key={caterer._id}>
+					<h3>{caterer.CatererName}</h3>
+					<p>Location: {caterer.Location}</p>
+					<p>Starting Price: {caterer.StartingPrice}</p>
+					<p>Contact: {caterer.Contact}</p>
+					<p>Webpage: <a href={caterer.Webpage}>{caterer.Webpage}</a></p>
+					<p>Review: {caterer.Review}</p>
+					</li>
+				))}
+				</ul>
+			</div>
 			{/* <div className="home-navigation">
 				<div className="row">
 					{routes.map((route, index) => (
@@ -174,9 +189,9 @@ const Home = () => {
 						</div>
 					))}
 				</div>
-								</div> */}
+								</div> /*}
 		</main>
 	);
 };
 
-export default Home;
+export default Home;*/
