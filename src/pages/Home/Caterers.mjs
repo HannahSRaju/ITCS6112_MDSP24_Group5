@@ -22,7 +22,7 @@ async function getAllCaterers() {
       });
   
       //console.log("All documents:", response.data); // Log the response containing all documents
-      return JSON.stringify(response.data.documents); // Return the documents
+      return response.data.documents; // Return the documents
     } catch (error) {
       console.error("Error retrieving caterers:", error);
       return []; // Return an empty array in case of error

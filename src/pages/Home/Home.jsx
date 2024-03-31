@@ -9,7 +9,6 @@ import favicon, { eventImg } from "../../utils/images";
 import { catererData } from "./Caterers.mjs"; // Import catererData from Caterers.mjs
 
 const Home = () => {
-  console.log("catererData: ", catererData)
   const [scrolled, setScrolled] = useState(false);
   const vh = window.innerHeight / 100;
   const { theme, setSideBarLinks, breakpoint } = useContext(GlobalContext);
@@ -25,6 +24,9 @@ const Home = () => {
       document.removeEventListener("scroll", () => {});
     };
   }, [setSideBarLinks, vh]);
+
+  // Convert catererData object into an array
+  const catererArray = Object.values(catererData);
 
   return (
     <main className="home">
@@ -47,7 +49,7 @@ const Home = () => {
       <div className="caterer-list">
         <h2>Caterers</h2>
         <ul>
-          {catererData.map(caterer => ( // calling catererData to display on Home page
+          {catererArray.map(caterer => (
             <li key={caterer._id}>
               <h3>{caterer.CatererName}</h3>
               <p>Location: {caterer.Location}</p>
@@ -64,6 +66,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 
