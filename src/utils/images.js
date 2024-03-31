@@ -4,6 +4,17 @@ import userFallBackImg from "../images/user.svg";
 import peopleImg from "../images/people.svg";
 import eventImg from "../images/event-plan.jpg";
 import oneBgImg from "../images/weddingBG.jpg";
+import sportsImg from "../images/sportsImg.jpg";
+import corporateImg from "../images/corporateImg.jpeg";
+import birthdayImg from "../images/birthdayImg.jpeg";
+import birthdayBKG from "../images/birthdayBKG.jpeg";
+import photographer from "../images/photographer.jpeg";
+import venue from "../images/venue.jpeg";
+import florist from "../images/florist.jpg";
+import caterer from "../images/caterer.jpeg";
+import planner from "../images/planner.jpeg";
+import weddingBKG from "../images/weddingBKG.jpg";
+
 
 import registerBg from "../images/register-bg.jpg";
 import loginBg from "../images/login-bg.jpeg";
@@ -105,5 +116,15 @@ export {
 	blueSky,
 	IconMask,
 	eventImg,
-	oneBgImg
+	oneBgImg,
+	sportsImg,
+	corporateImg,
+	birthdayImg,
+	birthdayBKG,
+	venue,
+	photographer,
+	caterer,
+	florist,
+	planner,
+	weddingBKG
 };

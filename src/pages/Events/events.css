@@ -21,11 +21,9 @@
 }
 .events-body {
   width: 100%;
-  margin: 0.5rem 0;
 }
 .events-body-section {
   width: 100%;
-  margin: 0.5rem auto;
 }
 .events-body-section__head {
   font-size: 2rem;
@@ -38,15 +36,14 @@
 }
 
 .event {
-  width: 21rem;
-  height: 7rem;
-  display: flex;
+  width: 63rem;
+  height: 10rem;
   justify-content: center;
   align-items: center;
   padding: 0.25rem;
   margin: 1.5rem 0;
   background-color: var(--bgcolor-100);
-  border-radius: 2rem;
+  cursor: pointer;
 }
 @media (max-width: 672px) {
   .event {
@@ -54,14 +51,13 @@
   }
 }
 .event:hover {
-  background-color: var(--bgcolor-400);
-  border-radius: 16px;
+  background-color: palevioletred
 }
 .event > * {
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  cursor: pointer;
 }
 .event__icon {
   width: 17.5%;
@@ -87,19 +83,21 @@
   }
 }
 .event-details > * {
-  width: 80%;
-  height: 35%;
-  padding: 0.15rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+	width: 100%;
+    height: 100%;
+    /* padding: 0.15rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkcyan;
 }
 .event-details__title {
   font-size: 1.35rem;
-  line-height: 1.75rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+    white-space: nowrap;
+    font-family: cursive;
+    font-weight: 600;
+    color: black;
+    margin-left: 10px;
 }
 .event-details__date {
   font-size: 1rem;

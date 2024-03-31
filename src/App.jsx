@@ -11,6 +11,9 @@ import NotFound from "./pages/NotFound/NotFound";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Calendar from "./pages/Calendar/Calendar";
+import Wedding from "./pages/Wedding/wedding";
+import Birthday from "./pages/Birthday/birthday";
+
 import Events from "./pages/Events/Events";
 import PrivateRoute from "./components/PrivateRoute";
 import Notes from "./pages/Notes/Notes";
@@ -126,6 +129,11 @@ const Wrapper = () => {
 				<Route path="/register" element={<Register />} />
 				<Route path="/logout" element={<Logout />} />
 				<Route path="/calendar" element={<Calendar />} />
+				<Route path="/wedding" element={<Wedding />} />
+				<Route path="/birthday" element={<Birthday />} />
+				{/* <Route path="/sports" element={<Sports />} /> */}
+				{/* <Route path="/corporate" element={<Corporate />} /> */}
+
 				<Route
 					path="/profile"
 					element={

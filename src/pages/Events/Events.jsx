@@ -34,16 +34,18 @@ const Events = () => {
 				else m1.set(presentDate, [...a, event]);
 			}
 		}
-		let newArr = [];
-		for (const [key, value] of m1) {
-			newArr = [
-				...newArr,
-				{
-					month: key,
-					eventsOfMonth: value,
-				},
-			];
-		}
+		let newArr = [
+			'Wedding', 'Birthday', 'Sports', 'Corporate Event'
+		];
+		// for (const [key, value] of m1) {
+		// 	newArr = [
+		// 		...newArr,
+		// 		{
+		// 			month: key,
+		// 			eventsOfMonth: value,
+		// 		},
+		// 	];
+		// }
 		setEventsToRender(newArr);
 	}, [events]);
 
@@ -52,29 +54,21 @@ const Events = () => {
 			{eventsToRender.length > 0 ? (
 				<>
 					<section className="events-head">
-						<span>Events</span>
+						<span>Events </span>
 					</section>
 					<section className="events-body">
-						{eventsToRender?.map((element, index) => (
-							<div className="events-body-section" key={index}>
+						{
+							<div className="events-body-section">
 								<div className="events-body-section__body">
-									<Row>
-										{element?.eventsOfMonth?.map(
-											(event, index) => (
+										
 												<Col
-													lg={33}
-													md={50}
-													sm={50}
-													key={index}
+													
 												>
-													<Event {...event} />
+													<Event/>
 												</Col>
-											)
-										)}
-									</Row>
 								</div>
 							</div>
-						))}
+						}
 					</section>
 				</>
 			) : (
