@@ -10,7 +10,7 @@ import {
 } from "../controllers/events.mjs";
 import auth from "../middleware/auth.mjs";
 
-import { catererData } from "../src/caterers.mjs";
+//import { catererData } from "../src/caterers.mjs";
 
 const router = Router();
 
@@ -23,8 +23,8 @@ router.put("/trash/:id", moveEventToTrash);
 router.put("/restore/:id", restoreEventFromTrash);
 router.delete("/delete/:id", deleteEvent);
 
-router.get(catererData);
-router.put(catererData);
-console.log('catererData: ', catererData); 
+//router.get(catererData);
+//router.put(catererData);
+//console.log('catererData: ', catererData); 
 
 export default router;
