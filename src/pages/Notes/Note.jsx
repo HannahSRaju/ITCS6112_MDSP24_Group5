@@ -25,6 +25,7 @@ const Note = ({
 }) => {
 	const {
 		theme,
+		catererData, 
 		archiveNote,
 		unArchiveNote,
 		moveNoteToTrash,
