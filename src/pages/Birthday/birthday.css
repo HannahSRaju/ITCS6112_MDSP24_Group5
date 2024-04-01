@@ -49,12 +49,12 @@
   .blockss {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; /* Adjust as needed */
+    justify-content: space-around;
   }
   
   .list-item {
-    flex: 0 0 30%; /* Adjust width as needed */
-    margin-bottom: 20px; /* Add space between tiles */
+    flex: 0 0 30%;
+    margin-bottom: 20px;
     list-style: none;
     border-radius: 10px;
     overflow: hidden;
@@ -70,15 +70,15 @@
   }
   
   .vendor-details {
-    flex: 0 0 100%; /* Ensure each row has full width */
+    flex: 0 0 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; /* Adjust as needed */
+    justify-content: space-around;
   }
   
   .vendor-item {
-    width: 45%; /* Adjust width as needed */
-    margin-bottom: 20px; /* Add space between items */
+    width: 45%;
+    margin-bottom: 20px;
     padding: 10px;
     border-radius: 10px;
     background-color: white;
@@ -93,6 +93,4 @@
   .vendor-item p {
     margin: 5px 0;
     font-size: 16px;
-  }
-  
-  
+  }  
