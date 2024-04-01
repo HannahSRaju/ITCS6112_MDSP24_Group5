@@ -30,3 +30,69 @@
     border-color: brown;
     color: brown;
 }
+
+.birthday-container {
+    position: relative;
+  }
+  
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: -1;
+  }
+  
+  .blockss {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Adjust as needed */
+  }
+  
+  .list-item {
+    flex: 0 0 30%; /* Adjust width as needed */
+    margin-bottom: 20px; /* Add space between tiles */
+    list-style: none;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .category-title {
+    background-color: white;
+    padding: 20px;
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .vendor-details {
+    flex: 0 0 100%; /* Ensure each row has full width */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Adjust as needed */
+  }
+  
+  .vendor-item {
+    width: 45%; /* Adjust width as needed */
+    margin-bottom: 20px; /* Add space between items */
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+  }
+  
+  .vendor-item h3 {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .vendor-item p {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  
+  
