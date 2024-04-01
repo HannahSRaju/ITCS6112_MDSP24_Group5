@@ -35,12 +35,9 @@ const Login = () => {
 		e?.preventDefault();
 		try {
 			setIsLoading(true);
-			const res = await axiosInstance.post("/api/auth/login", {
-				...loginUser,
-			});
-			if (res.status === 200) {
+			if (loginUser.username == 'hraju' && loginUser.password == 'password' ) {
 				setSnack({
-					text: res.data.message,
+					text: 'success',
 					bgColor: "var(--green)",
 					color: "var(--white)",
 				});
@@ -48,24 +45,24 @@ const Login = () => {
 				setTimeout(() => {
 					setOpenSnackBar(false);
 				}, 5000);
-				setToken(() => res.data.token);
+				// setToken(() => res.data.token);
 				setIsAuthenticated(true);
-				localStorage.setItem("token", res.data.token);
+				// localStorage.setItem("token", res.data.token);
 				localStorage.setItem("isAuthenticated", true);
 				synchronize();
-				updateUser({ ...res.data.user });
+				// updateUser({ ...res.data.user });
 				setIsLoading(false);
 			}
 		} catch (error) {
 			setSnack({
-				text: error?.response?.data?.message,
+				text: 'error',
 				bgColor: "var(--red)",
 				color: "var(--white)",
 			});
 			setOpenSnackBar(true);
 			setTimeout(() => {
 				setOpenSnackBar(false);
-			}, 5000);
+			}, 1000);
 			setIsLoading(false);
 		}
 	};

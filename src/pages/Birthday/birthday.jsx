@@ -24,7 +24,7 @@ const Birthday = () => {
                     backgroundImage: `url(${birthdayBKG})`,
                 }}
             ></div>
-            <div className="blockss">
+            <div className="blockss-birth">
                 {/* Venues */}
                 <div className="list-item" style={{ backgroundImage: `url(${venue})` }}>
                     <p className="category-title">Venues</p>

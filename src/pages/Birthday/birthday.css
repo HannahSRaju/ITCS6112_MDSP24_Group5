@@ -1,9 +1,3 @@
-.blockss {
-	display: grid;
-	gap: 40px;
-    grid-template-columns: 1fr 1fr;
-}
-
 .list-item {
 	align-items: center;
     background-color: white;
@@ -46,7 +40,7 @@
     z-index: -1;
   }
   
-  .blockss {
+  .blockss-birth {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
