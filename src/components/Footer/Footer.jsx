@@ -6,6 +6,8 @@ import "./footer.css";
 import { GitHub, Linkedin, Mail } from "react-feather";
 import GlobalContext from "../../Context/GlobalContext";
 import favicon, { waves } from "../../utils/images";
+import LinkButton from "../../components/Button/LinkButton";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
 	const { theme, accentColor, setOpenSnackBar, setSnack } =
@@ -110,59 +112,20 @@ const Footer = () => {
 				<div className="footer-center-feedback">
 					<h2 style={{
 						color: 'darkcyan',
-						fontSize: 'xx-large'
-					}}> How can we help? Contact Us </h2>
-					<form
-						className="footer-center-form"
-						onReset={handleReset}
-						onSubmit={handleSubmit}
-					>
-						<Input
-							type="text"
-							name="name"
-							required
-							placeholder="Enter Your Name"
-							icon="person"
-							value={userMessage.name}
-							onChange={handleChange}
-						/>
-						<Input
-							type="email"
-							name="email"
-							required
-							placeholder="Enter Your Email"
-							icon="mail"
-							value={userMessage.email}
-							onChange={handleChange}
-						/>
-						<TextArea
-							type="text"
-							name="message"
-							required
-							placeholder="Your Message Here"
-							icon="chat"
-							value={userMessage.message}
-							onChange={handleChange}
-							rows={5}
-						/>
-						<div className="form-group">
-							<Button
-								text="Cancel"
-								type="reset"
-								color={accentColor}
-							/>
-							<Button
-								text="Submit"
-								type="submit"
-								variant="fill"
-								color={accentColor}
-							/>
-						</div>
-					</form>
+						fontSize: 'xx-large',
+						marginBottom: '20px', // Adding space between the heading and link
+						textAlign: 'center' // Centering the heading
+					}}> Want us to plan your event? </h2>
+					<div style={{ textAlign: 'center' }}> {/* Centering the link */}
+						<a href="https://forms.gle/EXPKavkpmwYSj4H67" target="_blank">
+							<u>Request Event Plan</u>
+						</a>
+					</div>
 				</div>
 			</div>
 		</footer>
 	);
+	
 };
 
 export default Footer;
