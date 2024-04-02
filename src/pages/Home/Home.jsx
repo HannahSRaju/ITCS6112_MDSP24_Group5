@@ -35,7 +35,7 @@ const Home = () => {
           <div className="card-box">
             <div className="home-box-title">
               <span className="home-box-title__text">
-                <h4 style={{ textAlign: 'center', marginBottom: '2rem', fontStyle: 'cursive', color: 'red' }}>
+                <h4 style={{ textAlign: 'center', marginBottom: '2rem', fontStyle: 'Google Sans', color: 'red' }}>
                   Welcome to <LinkButton to="/events"><u>Online Event Planner</u></LinkButton>
                 </h4>
               </span>
