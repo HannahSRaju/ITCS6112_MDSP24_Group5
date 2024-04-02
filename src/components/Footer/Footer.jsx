@@ -118,6 +118,21 @@ const Footer = () => {
 			</div>
 		  </div>
 		</div>
+		<div className="footer-center">
+		  <div className="footer-center-feedback">
+			<h2 style={{
+			  color: 'darkcyan',
+			  fontSize: 'xx-large',
+			  marginBottom: '20px', // Adding space between the heading and link
+			  textAlign: 'center' // Centering the heading
+			}}> Want to leave a review? </h2>
+			<div style={{ textAlign: 'center' }}> {/* Centering the link */}
+			  <a href="https://forms.gle/51ewHV8bHDneRMV47" target="_blank" className="color-changing-link">
+				<u>Leave a Review</u>
+			  </a>
+			</div>
+		  </div>
+		</div>
 	  </footer>
 	);
 	
