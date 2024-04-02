@@ -99,31 +99,26 @@ const Footer = () => {
 		});
 	};
 	return (
-		<footer
-			className="footer"
-			style={{
-				backgroundImage: `url(${
-					waves[accentColor][theme === "light" ? 0 : 1]
-				})`,
-				backgroundColor: "lavender"
-			}}
-		>
-			<div className="footer-center">
-				<div className="footer-center-feedback">
-					<h2 style={{
-						color: 'darkcyan',
-						fontSize: 'xx-large',
-						marginBottom: '20px', // Adding space between the heading and link
-						textAlign: 'center' // Centering the heading
-					}}> Want us to plan your event? </h2>
-					<div style={{ textAlign: 'center' }}> {/* Centering the link */}
-						<a href="https://forms.gle/EXPKavkpmwYSj4H67" target="_blank">
-							<u>Request Event Plan</u>
-						</a>
-					</div>
-				</div>
+	<footer className="footer" style={{
+		backgroundImage: `url(${waves[accentColor][theme === "light" ? 0 : 1]})`,
+		backgroundColor: "lavender"
+	  }}>
+		<div className="footer-center">
+		  <div className="footer-center-feedback">
+			<h2 style={{
+			  color: 'darkcyan',
+			  fontSize: 'xx-large',
+			  marginBottom: '20px', // Adding space between the heading and link
+			  textAlign: 'center' // Centering the heading
+			}}> Want us to plan your event? </h2>
+			<div style={{ textAlign: 'center' }}> {/* Centering the link */}
+			  <a href="https://forms.gle/EXPKavkpmwYSj4H67" target="_blank" className="color-changing-link">
+				<u>Request Event Plan</u>
+			  </a>
 			</div>
-		</footer>
+		  </div>
+		</div>
+	  </footer>
 	);
 	
 };
