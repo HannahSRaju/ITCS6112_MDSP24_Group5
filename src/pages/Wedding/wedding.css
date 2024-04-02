@@ -2,13 +2,11 @@
 
 .list-item {
 	align-items: center;
-    background-color: white;
     margin-top: 4rem;
     margin-right: 10rem;
     margin-left: 10rem;
     margin-bottom: 2rem;
-    border: black;
-    border: solid;
+    border: solid 5px wheat;
     height: 20rem;
     color: black;
     font-family: "Google Sans", Roboto, Arial, sans-serif;
@@ -19,12 +17,6 @@
     justify-content: center;
     cursor: pointer;
 	background-repeat: round;
-}
-.list-item:hover {
-    cursor: pointer;
-    border-style: solid;
-    border-color: brown;
-    color: brown;
 }
 
 .wedding-container {
@@ -52,17 +44,19 @@
     flex: 0 0 30%;
     margin-bottom: 20px;
     list-style: none;
-    border-radius: 10px;
+    border-radius: 50px;
     overflow: hidden;
+	box-shadow: 0 0 4px grey;
   }
   
   .category-title {
-    background-color: white;
     padding: 20px;
     margin: 0;
-    font-size: 20px;
+    font-size: 75px;
     font-weight: bold;
+	color: wheat;
     text-align: center;
+	text-shadow: 0 0 4px black;
   }
   
   .vendor-details {
