@@ -30,7 +30,7 @@ import GlobalContext from "./Context/GlobalContext";
 import Loader from "./components/Loader/Loader";
 import SnackBar from "./components/SnackBar/SnackBar";
 import Logout from "./pages/Logout";
-//import EventsTrash from "./pages/Events/EventsTrash";
+import EventsTrash from "./pages/Events/EventsTrash";
 import Settings from "./pages/Settings/Settings";
 import Lists from "./pages/Lists/Lists";
 import List from "./pages/List/List";
@@ -150,14 +150,14 @@ const Wrapper = () => {
 						</PrivateRoute>
 					}
 				/> 
-				{/*<Route
+				<Route
 					path="/events/trash"
 					element={
 						<PrivateRoute>
 							<EventsTrash />
 						</PrivateRoute>
 					}
-				/>*/}
+				/>
 				<Route
 					path="/notes"
 					element={

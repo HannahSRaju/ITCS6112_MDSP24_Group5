@@ -4,7 +4,7 @@ import Fab from "../../components/Button/Fab";
 import Empty from "../../components/Empty/Empty";
 import GlobalContext from "../../Context/GlobalContext";
 import Row, { Col } from "../../Layout/Responsive";
-//import AddEvent from "./AddEvent";
+import AddEvent from "./AddEvent";
 import Event from "./Event";
 import "./events.css";
 import { eventsNavLinks } from "../../utils/navigation";
