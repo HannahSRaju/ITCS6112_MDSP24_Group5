@@ -22,3 +22,7 @@ export async function getPhotographersData(collectionName) {
     return []; // Return an empty array if error occurs
   }
 }
+
+// Call the function to retrieve all photographers and export the data
+export const allPhotographerData = await getPhotographersData();
+console.log("allPhotographerData from PhotographersData.mjs: ", allPhotographerData)

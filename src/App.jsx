@@ -34,6 +34,12 @@ import EventsTrash from "./pages/Events/EventsTrash";
 import Settings from "./pages/Settings/Settings";
 import Lists from "./pages/Lists/Lists";
 import List from "./pages/List/List";
+import Caterers from "./pages/Wedding/AllCaterers";
+import Florists from "./pages/Wedding/AllFlorists";
+import Photographers from "./pages/Wedding/AllPhotographers";
+import Planners from "./pages/Wedding/AllPlanners";
+import Venues from "./pages/Wedding/AllVenues";
+// Import Planners, Caterers, Florists, Photographers, and Venues components here
 
 const Wrapper = () => {
 	AOS.init();
@@ -142,7 +148,7 @@ const Wrapper = () => {
 						</PrivateRoute>
 					}
 				/>
-				 <Route
+				<Route
 					path="/events"
 					element={
 						<PrivateRoute>
@@ -222,6 +228,12 @@ const Wrapper = () => {
 						</PrivateRoute>
 					}
 				/>
+				{/* Add Planners, Caterers, Florists, Photographers, and Venues routes below */}
+				<Route path="/AllPlanners" element={<Planners />} /> 
+				<Route path="/AllCaterers" element={<Caterers />} />
+				<Route path="/AllFlorists" element={<Florists />} />
+				<Route path="/AllPhotographers" element={<Photographers />} />
+				<Route path="/AllVenues" element={<Venues />} />
 				<Route path="/contact" element={<Contact />} />
 				<Route path="/settings" element={<Settings />} />
 				<Route path="*" element={<NotFound />} />

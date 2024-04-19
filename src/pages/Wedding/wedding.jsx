@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { venueData } from "./VenuesData.mjs";
-import { catererData } from "./CaterersData.mjs";
-import { floristData } from "./FloristsData.mjs";
-import { photographerData } from "./PhotographersData.mjs";
-import { plannerData } from "./PlannersData.mjs";
+import { venueData } from "./VenuesW.mjs";
+import { catererData } from "./CaterersW.mjs";
+import { floristData } from "./FloristsW.mjs";
+import { photographerData } from "./PhotographersW.mjs";
+import { plannerData } from "./PlannersW.mjs";
 import { venue, caterer, florist, photographer, planner } from "../../utils/images";
 import "./wedding.css";
 
@@ -17,7 +17,7 @@ const Venues = () => {
 
     return (
         <div className="wedding-container">
-            <Link to="/venues">
+            <Link to="/AllVenues">
                 <div className="blockss">
                     {/* Venues */}
                     <div className="list-item" style={{ backgroundImage: `url(${venue})` }}>
@@ -40,7 +40,7 @@ const Venues = () => {
                     <br />
                 </div>
             </Link>
-            <Link to="/caterers">
+            <Link to="/AllCaterers">
                 <div className="blockss">
                     {/* Caterers */}
                     <div className="list-item" style={{ backgroundImage: `url(${caterer})` }}>
@@ -61,7 +61,7 @@ const Venues = () => {
                     <br />
                 </div>
             </Link>
-            <Link to="/florists">
+            <Link to="/AllFlorists">
                 <div className="blockss">
                     {/* Florists */}
                     <div className="list-item" style={{ backgroundImage: `url(${florist})` }}>
@@ -82,7 +82,7 @@ const Venues = () => {
                     <br />
                 </div>
             </Link>
-            <Link to="/photographers">
+            <Link to="/AllPhotographers">
                 <div className="blockss">
                     {/* Photographers */}
                     <div className="list-item" style={{ backgroundImage: `url(${photographer})` }}>

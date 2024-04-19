@@ -22,3 +22,7 @@ export async function getVenuesData(collectionName) {
     return []; // Return an empty array if error occurs
   }
 }
+
+// Call the function to retrieve all venues and export the data
+export const allVenueData = await getVenuesData();
+console.log("allVenueData from VenuesData.mjs: ", allVenueData)

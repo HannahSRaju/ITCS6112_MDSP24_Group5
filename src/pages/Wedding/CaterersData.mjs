@@ -22,3 +22,6 @@ export async function getCaterersData(collectionName) {
     return []; // Return an empty array if error occurs
   }
 }
+// Call the function to retrieve all caterers and export the data
+export const allCatererData = await getCaterersData();
+console.log("allCatererData from CaterersData.mjs: ", allCatererData)

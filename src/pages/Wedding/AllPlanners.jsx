@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { plannerData } from "./PlannersData.mjs";
+import { allPlannerData } from "./PlannersData.mjs";
 import { planner } from "../../utils/images";
 import "./wedding.css";
 
@@ -12,7 +12,7 @@ const Planners = () => {
 		review: ""
     });
 
-    const plannersArray = Object.values(plannerData);
+    const plannersArray = Object.values(allPlannerData);
 
     const handleFilterChange = (event) => {
         const { name, value } = event.target;

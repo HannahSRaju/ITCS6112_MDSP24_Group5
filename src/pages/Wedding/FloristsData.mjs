@@ -22,3 +22,7 @@ export async function getFloristsData(collectionName) {
     return []; // Return an empty array if error occurs
   }
 }
+
+// Call the function to retrieve all florists and export the data
+export const allFloristData = await getFloristsData();
+console.log("allFloristData from FloristsData.mjs: ", allFloristData);

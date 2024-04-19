@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { floristData } from "./FloristsData.mjs";
+import { allFloristData } from "./FloristsData.mjs";
 import { florist } from "../../utils/images";
 import "./wedding.css";
 
@@ -11,7 +11,7 @@ const Florists = () => {
 		review: ""
     });
 
-    const floristsArray = Object.values(floristData);
+    const floristsArray = Object.values(allFloristData);
 
     const handleFilterChange = (event) => {
         const { name, value } = event.target;

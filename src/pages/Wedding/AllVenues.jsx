@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { venueData } from "./VenuesData.mjs";
+import { allVenueData } from "./VenuesData.mjs";
 import { venue } from "../../utils/images";
 import "./wedding.css";
 
@@ -13,7 +13,7 @@ const Venues = () => {
 		review: ""
     });
 
-    const venuesArray = Object.values(venueData);
+    const venuesArray = Object.values(allVenueData);
 
     const handleFilterChange = (event) => {
         const { name, value } = event.target;

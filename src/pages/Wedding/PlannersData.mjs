@@ -22,3 +22,7 @@ export async function getPlannersData(collectionName) {
     return []; // Return an empty array if error occurs
   }
 }
+
+// Call the function to retrieve all planners and export the data
+export const allPlannerData = await getPlannersData();
+console.log("allPlannerData from PlannersData.mjs: ", allPlannerData)
