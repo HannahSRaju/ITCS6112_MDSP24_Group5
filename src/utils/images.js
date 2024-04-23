@@ -64,6 +64,8 @@ import waveLightBrown from "../images/waves/wave-light-brown.svg";
 import waveDarkBrown from "../images/waves/wave-dark-brown.svg";
 import waveLightOrange from "../images/waves/wave-light-orange.svg";
 import waveDarkOrange from "../images/waves/wave-dark-orange.svg";
+import filterImg from "../images/filter.jpg";
+
 
 const waves = {
 	indigo: [waveLightIndigo, waveDarkIndigo],
@@ -115,6 +117,7 @@ export {
 	tourist,
 	blueSky,
 	IconMask,
+	filterImg,
 	eventImg,
 	oneBgImg,
 	sportsImg,

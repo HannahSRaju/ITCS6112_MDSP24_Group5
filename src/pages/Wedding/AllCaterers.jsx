@@ -5,13 +5,13 @@ import "./wedding.css";
 
 const Caterers = () => {
     const [filterCriteria, setFilterCriteria] = useState({
-        catererName: "",
-        location: "",
-        startingPrice: "",
-		review: ""
+        CatererName: "",
+        Location: "",
+		Review: ""
     });
 
     const caterersArray = Object.values(allCatererData);
+	const [showFilters, setShowFilters] = useState(false);
 
     const handleFilterChange = (event) => {
         const { name, value } = event.target;
@@ -20,15 +20,55 @@ const Caterers = () => {
 
     const applyFilter = (caterer) => {
         for (let key in filterCriteria) {
-            if (filterCriteria[key] !== "" && caterer[key].toLowerCase().indexOf(filterCriteria[key].toLowerCase()) === -1) {
+			if (filterCriteria[key] !== "") {
+			const catererValue = caterer[key]?.toString().toLowerCase(); // Convert to lowercase string
+				const filterValue = filterCriteria[key].toLowerCase();
+				if (key == 'CatererName' || key == 'Location') {
+            if (filterCriteria[key] !== "" && catererValue.indexOf(filterValue) === -1) {
                 return false;
             }
+		} else if (key == 'Review') {
+				let v = +catererValue;
+				let f = +filterValue;
+				if (!catererValue || v < f) {
+					return false;
+				}
+			}
         }
+	}
         return true;
     };
 
     return (
         <div className="wedding-container">
+			<div style={{
+				height: '30px',
+				display: 'flex',
+				justifyContent: 'right'
+			}}>
+				<button onClick={() => setShowFilters(!showFilters)} style={{
+					fontWeight: '600',
+					backgroundColor: 'cadetblue',
+					width: '10vw',
+					height: '30px'
+				}}>
+					Filters
+				</button>
+				{showFilters && (
+			 <div className="filter-section">
+                        <input type="text" name="CatererName" placeholder="Caterer Name" value={filterCriteria.CatererName} onChange={handleFilterChange} />
+                        <input type="text" name="Location" placeholder="Location" value={filterCriteria.Location} onChange={handleFilterChange} />
+						<input type="text" name="Review" placeholder="Review" value={filterCriteria.Review} onChange={handleFilterChange} />
+                        {/* Add more inputs for other fields */}
+                        <button onClick={() => setFilterCriteria({
+                            CatererName: "",
+                            Location: "",
+							Review: ""
+                            // Reset other fields here
+                        })}>Reset</button>
+                    </div>
+					)}
+					</div>
             <div className="blockss">
                 {/* Caterers */}
                 <div className="list-item" style={{ backgroundImage: `url(${caterer})` }}>
@@ -36,20 +76,7 @@ const Caterers = () => {
                 </div>
                 <div className="vendor-details">
                     {/* Filter section */}
-                    <div className="filter-section">
-                        <input type="text" name="catererName" placeholder="Caterer Name" value={filterCriteria.catererName} onChange={handleFilterChange} />
-                        <input type="text" name="location" placeholder="Location" value={filterCriteria.location} onChange={handleFilterChange} />
-                        <input type="text" name="startingPrice" placeholder="Starting Price" value={filterCriteria.startingPrice} onChange={handleFilterChange} />
-						<input type="text" name="review" placeholder="Review" value={filterCriteria.review} onChange={handleFilterChange} />
-                        {/* Add more inputs for other fields */}
-                        <button onClick={() => setFilterCriteria({
-                            catererName: "",
-                            location: "",
-                            startingPrice: "",
-							review: ""
-                            // Reset other fields here
-                        })}>Reset</button>
-                    </div>
+                   
                     {/* Caterer details based on filter */}
                     {caterersArray.length > 0 ? (
                         caterersArray.filter(applyFilter).map((caterer, index) => (

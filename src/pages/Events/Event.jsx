@@ -1,27 +1,20 @@
-import moment from "moment";
 import React, { useContext, useState } from "react";
-import { useNavigate } from 'react-router-dom';
-import IconButton from "../../components/Button/IconButton";
+import { useNavigate } from "react-router-dom";
 import Chip from "../../components/Chip/Chip";
-import MaterialIcons from "../../components/MaterialIcons";
 import GlobalContext from "../../Context/GlobalContext";
-import Popup from "../../Layout/Popup/Popup";
-import EventPopup from "./EventPopup";
-import { oneBgImg, eventImg, sportsImg, corporateImg, birthdayImg } from "../../utils/images";
+import {
+	oneBgImg,
+	eventImg,
+	sportsImg,
+	corporateImg,
+	birthdayImg,
+} from "../../utils/images";
 
-const Event = ({
-	title,
-	description,
-	date,
-	time,
-	type,
-	link,
-	trashed
-}) => {
+const Event = ({ title, description, date, time, type, link, trashed }) => {
 	const navigate = useNavigate();
 	const { theme, moveEventToTrash, restoreEventFromTrash, deleteEvent } =
 		useContext(GlobalContext);
-const showIcon = (e) => {
+	const showIcon = (e) => {
 		switch (e) {
 			case "birthday":
 				return "cake";
@@ -49,7 +42,7 @@ const showIcon = (e) => {
 				return "purple";
 			case "ceremony":
 				return "green";
-default:
+			default:
 				return "bgcolor";
 		}
 	};
@@ -63,36 +56,52 @@ default:
 			setOpenTrashPopup(false);
 		},
 	});
-const [popupContent, setPopupContent] = useState(
+	const [popupContent, setPopupContent] = useState(
 		<>
 			Move the event{" "}
 			<Chip text={title} size="small" color={getColor(type)} /> to Trash
 			Bin?
 		</>
-);
+	);
 
-const stringArray = [
-    { name: 'Wedding', route: '/wedding' },
-    { name: 'Birthday', route: '/birthday' },
-    { name: 'Sports', route: '/sports' },
-    { name: 'Corporate', route: '/corporate' },
-  ];
+	const stringArray = [
+		{ name: "Wedding", route: "/wedding" },
+		{ name: "Birthday", route: "/birthday" },
+		{ name: "Sports", route: "/sports" },
+		{ name: "Corporate", route: "/corporate" },
+	];
 
 	return (
-		<div
-		>
+		<div>
 			{stringArray.map((user, index) => (
-        <div className="event" key={index}>
-          <div onClick={() => setOpenEventPopup(true)}>
-            <img alt="Background" style={{width: '50%'}} src={user.name == 'Wedding' ? oneBgImg  : (user.name == 'Birthday' ? birthdayImg : (user.name == 'Sports' ? sportsImg : (user.name == 'Corporate' ? corporateImg : '')))}/>
-            <div className="event-details">
-              <div className="event-details__title" onClick={() => navigate(user.route)}>
-                {user.name}
-              </div>
-            </div>
-          </div>
-        </div>
-      ))}
+				<div className="event" key={index}>
+					<div onClick={() => setOpenEventPopup(true)}>
+						<img
+							alt="Background"
+							style={{ width: "50%" }}
+							src={
+								user.name == "Wedding"
+									? oneBgImg
+									: user.name == "Birthday"
+									? birthdayImg
+									: user.name == "Sports"
+									? sportsImg
+									: user.name == "Corporate"
+									? corporateImg
+									: ""
+							}
+						/>
+						<div className="event-details">
+							<div
+								className="event-details__title"
+								onClick={() => navigate(user.route)}
+							>
+								{user.name}
+							</div>
+						</div>
+					</div>
+				</div>
+			))}
 		</div>
 	);
 };

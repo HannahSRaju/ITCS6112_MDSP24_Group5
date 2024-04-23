@@ -23,7 +23,7 @@ const Venues = () => {
                     <div className="list-item" style={{ backgroundImage: `url(${venue})` }}>
                         <p className="category-title">Venues</p>
                     </div>
-                    <div className="vendor-details">
+                    {/* <div className="vendor-details">
                         {venuesArray.map((venue, index) => (
                             <div key={index} className="vendor-item">
                                 <h3>{venue.VenueName}</h3>
@@ -36,7 +36,7 @@ const Venues = () => {
                                 <p>Review: {venue.Review}</p>
                             </div>
                         ))}
-                    </div>
+                    </div> */}
                     <br />
                 </div>
             </Link>
@@ -46,7 +46,7 @@ const Venues = () => {
                     <div className="list-item" style={{ backgroundImage: `url(${caterer})` }}>
                         <p className="category-title">Caterers</p>
                     </div>
-                    <div className="vendor-details">
+                    {/* <div className="vendor-details">
                         {caterersArray.map((caterer, index) => (
                             <div key={index} className="vendor-item">
                                 <h3>{caterer.CatererName}</h3>
@@ -57,7 +57,7 @@ const Venues = () => {
                                 <p>Review: {caterer.Review}</p>
                             </div>
                         ))}
-                    </div>
+                    </div> */}
                     <br />
                 </div>
             </Link>
@@ -67,7 +67,7 @@ const Venues = () => {
                     <div className="list-item" style={{ backgroundImage: `url(${florist})` }}>
                         <p className="category-title">Florists</p>
                     </div>
-                    <div className="vendor-details">
+                    {/* <div className="vendor-details">
                         {floristsArray.map((florist, index) => (
                             <div key={index} className="vendor-item">
                                 <h3>{florist.FloristName}</h3>
@@ -78,7 +78,7 @@ const Venues = () => {
                                 <p>Review: {florist.Review}</p>
                             </div>
                         ))}
-                    </div>
+                    </div> */}
                     <br />
                 </div>
             </Link>
@@ -88,7 +88,7 @@ const Venues = () => {
                     <div className="list-item" style={{ backgroundImage: `url(${photographer})` }}>
                         <p className="category-title">Photographers</p>
                     </div>
-                    <div className="vendor-details">
+                    {/* <div className="vendor-details">
                         {photographersArray.map((photographer, index) => (
                             <div key={index} className="vendor-item">
                                 <h3>{photographer.Photographer}</h3>
@@ -100,7 +100,7 @@ const Venues = () => {
                                 <p>Review: {photographer.Review}</p>
                             </div>
                         ))}
-                    </div>
+                    </div> */}
                     <br />
                 </div>
             </Link>
@@ -110,7 +110,7 @@ const Venues = () => {
                     <div className="list-item" style={{ backgroundImage: `url(${planner})` }}>
                         <p className="category-title">Planners</p>
                     </div>
-                    <div className="vendor-details">
+                    {/* <div className="vendor-details">
                         {plannersArray.map((planner, index) => (
                             <div key={index} className="vendor-item">
                                 <h3>{planner.PlannerName}</h3>
@@ -122,7 +122,7 @@ const Venues = () => {
                                 <p>Review: {planner.Review}</p>
                             </div>
                         ))}
-                    </div>
+                    </div> */}
                     <br />
                 </div>
             </Link>

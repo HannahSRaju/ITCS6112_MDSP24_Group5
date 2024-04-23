@@ -6,7 +6,6 @@ import routes from "../../routes";
 import defaultNavLinks from "../../utils/navigation";
 import GlobalContext from "../../Context/GlobalContext";
 import favicon, { eventImg } from "../../utils/images";
-//import { catererData } from "./Caterers.mjs"; // Import catererData from Caterers.mjs
 
 const Home = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -24,9 +23,6 @@ const Home = () => {
       document.removeEventListener("scroll", () => {});
     };
   }, [setSideBarLinks, vh]);
-
-  // Convert catererData object into an array
-  //const catererArray = Object.values(catererData);
 
   return (
     <main className="home">
@@ -46,21 +42,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/*<div className="caterer-list">
-        <h2>Caterers</h2>
-        <ul>
-          {catererArray.map(caterer => (
-            <li key={caterer._id}>
-              <h3>{caterer.CatererName}</h3>
-              <p>Location: {caterer.Location}</p>
-              <p>Starting Price: {caterer.StartingPrice}</p>
-              <p>Contact: {caterer.Contact}</p>
-              <p>Webpage: <a href={caterer.Webpage}>{caterer.Webpage}</a></p>
-              <p>Review: {caterer.Review}</p>
-            </li>
-          ))}
-        </ul>
-		  </div> */}
     </main>
   );
 };
