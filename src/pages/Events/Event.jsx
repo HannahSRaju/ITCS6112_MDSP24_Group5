@@ -84,8 +84,7 @@ const stringArray = [
 			{stringArray.map((user, index) => (
         <div className="event" key={index}>
           <div onClick={() => setOpenEventPopup(true)}>
-            <img alt="Background" style={{width: '50%'}} src={user.name == 'Wedding' ? oneBgImg  : (user.name == 'Birthday' ? birthdayImg : (user.name == 'Sports' ? sportsImg : (user.name == 'Corporate' ? corporateImg : '')))}/>
-            <div className="event-details">
+            <div className="event-details" style={{ backgroundImage: `url(${user.name === 'Wedding' ? oneBgImg : (user.name === 'Birthday' ? birthdayImg : (user.name === 'Sports' ? sportsImg : (user.name === 'Corporate' ? corporateImg : '')))}`, backgroundSize: 'cover'}}>
               <div className="event-details__title" onClick={() => navigate(user.route)}>
                 {user.name}
               </div>
