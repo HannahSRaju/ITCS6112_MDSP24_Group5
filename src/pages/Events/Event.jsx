@@ -79,7 +79,7 @@ const stringArray = [
   ];
 
 	return (
-		<div
+		<div style={{ display: 'flex', flexWrap: 'wrap' , justifyContent: 'space-around'}}
 		>
 			{stringArray.map((user, index) => (
         <div className="event" key={index}>
