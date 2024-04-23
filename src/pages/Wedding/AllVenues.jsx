@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import { allVenueData } from "./VenuesData.mjs";
-import { venue } from "../../utils/images";
+import { filterImg, venue } from "../../utils/images";
 import "./wedding.css";
 
 const Venues = () => {
     const [filterCriteria, setFilterCriteria] = useState({
-        venueName: "",
-        location: "",
-        guestCapacity: "",
-        serviceType: "",
-        startingPrice: "",
-		review: ""
+        VenueName: "",
+        Location: "",
+        GuestCapacity: "",
+        ServiceType: "",
+        Review: ""
     });
 
     const venuesArray = Object.values(allVenueData);
+    const [showFilters, setShowFilters] = useState(false);
 
     const handleFilterChange = (event) => {
         const { name, value } = event.target;
@@ -22,15 +22,76 @@ const Venues = () => {
 
     const applyFilter = (venue) => {
         for (let key in filterCriteria) {
-            if (filterCriteria[key] !== "" && venue[key].toLowerCase().indexOf(filterCriteria[key].toLowerCase()) === -1) {
-                return false;
+            if (filterCriteria[key] !== "") {
+                const venueValue = venue[key]?.toString().toLowerCase(); // Convert to lowercase string
+                const filterValue = filterCriteria[key].toLowerCase();
+                if (key === 'VenueName' || key === 'Location' || key === 'ServiceType') {
+                    if (!venueValue || venueValue.indexOf(filterValue) === -1) {
+                        return false;
+                    }
+                } else if (key === 'Review' || key === 'GuestCapacity') {
+                    let v = +venueValue;
+                    let f = +filterValue;
+                    if (!venueValue || v < f) {
+                        return false;
+                    }
+                }
             }
         }
         return true;
     };
 
+    const handleSelectChange = (event) => {
+        const { name, value } = event.target;
+        const updatedFilterCriteria = { ...filterCriteria, [name]: value };
+        
+        // Set the color of the selected option to black
+        event.target.style.color = "black";
+
+        // Update the filter criteria
+        setFilterCriteria(updatedFilterCriteria);
+    };
+
     return (
         <div className="wedding-container">
+            <div style={{
+                height: '30px',
+                display: 'flex',
+                justifyContent: 'right'
+            }}>
+                <button onClick={() => setShowFilters(!showFilters)} style={{
+                    fontWeight: '600',
+                    backgroundColor: 'cadetblue',
+                    width: '10vw',
+                    height: '30px'
+                }}>
+                    Filters
+                </button>
+                {showFilters && (
+                    <div className="filter-section">
+                        <input type="text" name="VenueName" placeholder="Venue Name" value={filterCriteria.VenueName} onChange={handleFilterChange} />
+                        <input type="text" name="Location" placeholder="Location" value={filterCriteria.Location} onChange={handleFilterChange} />
+                        <input type="text" name="GuestCapacity" placeholder="Guest Capacity" value={filterCriteria.GuestCapacity} onChange={handleFilterChange} />
+                        <select name="ServiceType" value={filterCriteria.ServiceType} onChange={handleSelectChange}>
+                            <option value="" disabled>Select Service Type</option>
+                            <option value="All-inclusive">All-inclusive</option>
+                            <option value="Limited Services">Limited Services</option>
+                            <option value="Raw space">Raw space</option>
+                        </select>
+                        <input type="text" name="Review" placeholder="Review" value={filterCriteria.Review} onChange={handleFilterChange} />
+                        <button onClick={() => setFilterCriteria({
+                            VenueName: "",
+                            Location: "",
+                            GuestCapacity: "",
+                            ServiceType: "",
+                            StartingPrice: "",
+                            Review: ""
+                        })} style={{ fontWeight: '600', backgroundColor: 'darkseagreen' }}>
+                            Reset
+                        </button>
+                    </div>
+                )}
+            </div>
             <div className="blockss">
                 {/* Venues */}
                 <div className="list-item" style={{ backgroundImage: `url(${venue})` }}>
@@ -38,24 +99,7 @@ const Venues = () => {
                 </div>
                 <div className="vendor-details">
                     {/* Filter section */}
-                    <div className="filter-section">
-                        <input type="text" name="venueName" placeholder="Venue Name" value={filterCriteria.venueName} onChange={handleFilterChange} />
-                        <input type="text" name="location" placeholder="Location" value={filterCriteria.location} onChange={handleFilterChange} />
-                        <input type="text" name="guestCapacity" placeholder="Guest Capacity" value={filterCriteria.guestCapacity} onChange={handleFilterChange} />
-                        <input type="text" name="serviceType" placeholder="Service Type" value={filterCriteria.serviceType} onChange={handleFilterChange} />
-						<input type="text" name="startingPrice" placeholder="Starting Price" value={filterCriteria.startingPrice} onChange={handleFilterChange} />
-						<input type="text" name="review" placeholder="Review" value={filterCriteria.review} onChange={handleFilterChange} />
-                        {/* Add more inputs for other fields */}
-                        <button onClick={() => setFilterCriteria({
-                            venueName: "",
-                            location: "",
-                            guestCapacity: "",
-                            serviceType: "",
-							startingPrice: "",
-							review: ""
-                            // Reset other fields here
-                        })}>Reset</button>
-                    </div>
+
                     {/* Venue details based on filter */}
                     {venuesArray.length > 0 ? (
                         venuesArray.filter(applyFilter).map((venue, index) => (
@@ -64,7 +108,6 @@ const Venues = () => {
                                 <p>Location: {venue.Location}</p>
                                 <p>Guest Capacity: {venue.GuestCapacity}</p>
                                 <p>Service Type: {venue.ServiceType}</p>
-                                <p>Starting Price: {venue.StartingPrice}</p>
                                 <p>Contact: {venue.Contact}</p>
                                 <p>Webpage: <a href={venue.Webpage}>{venue.Webpage}</a></p>
                                 <p>Review: {venue.Review}</p>
