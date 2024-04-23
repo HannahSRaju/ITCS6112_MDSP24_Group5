@@ -72,10 +72,25 @@
 	padding: 0.6rem 1rem;
 }
 
+.filter-section select {
+	padding: 0rem 0rem;
+}
+
 .filter-section input[type="text"]::placeholder {
 	color: gray;
 	/* Placeholder text color */
 }
+/* Set default text color for select element */
+.filter-section select {
+    color: gray;
+}
+
+/* Set text color for the options */
+.filter-section select option:checked {
+    color: black;
+}
+
+
 
 .filter-section button {
 	width: 100%;
