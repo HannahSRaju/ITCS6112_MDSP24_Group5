@@ -16,7 +16,7 @@
   padding: 0.35rem 4rem;
   margin: 0.5rem;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 .events-body {
@@ -36,7 +36,7 @@
 }
 
 .event {
-  width: 63rem;
+  width: 30rem;
   height: 10rem;
   justify-content: center;
   align-items: center;
@@ -44,6 +44,7 @@
   margin: 1.5rem 0;
   background-color: var(--bgcolor-100);
   cursor: pointer;
+  border-radius: 25px;
 }
 @media (max-width: 672px) {
   .event {
@@ -58,6 +59,7 @@
   display: flex;
   justify-content: center;
   cursor: pointer;
+  align-items: center;
 }
 .event__icon {
   width: 17.5%;
@@ -73,9 +75,11 @@
   }
 }
 .event-details {
-  width: 82.5%;
+  width: 98%;
+  height: 95%;
   flex-flow: column;
   position: relative;
+  border-radius: 25px;
 }
 @media (max-width: 672px) {
   .event-details {
@@ -89,15 +93,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: darkcyan;
 }
 .event-details__title {
-  font-size: 1.35rem;
+  font-size: 2rem;
     white-space: nowrap;
     font-family: "Google Sans";
-    font-weight: 600;
-    color: black;
+    font-weight: bold;
+    color: wheat;
     margin-left: 10px;
+	text-shadow: 0 0 3px black;
 }
 .event-details__date {
   font-size: 1rem;
