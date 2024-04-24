@@ -1,4 +1,4 @@
-import axios from 'axios';
+/** import axios from 'axios';
 
 // Retrieve all documents in the sampleVenues collection
 async function getAllVenues() {
@@ -27,3 +27,4 @@ async function getAllVenues() {
 // Retrieve and export all venues' data
 export const venueData = await getAllVenues();
 console.log("venueData: ", venueData);
+*/

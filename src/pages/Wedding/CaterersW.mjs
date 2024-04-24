@@ -1,4 +1,4 @@
-import axios from 'axios';
+/**import axios from 'axios';
 
 // Find all documents in the sampleCaterers collection
 async function getAllCaterers() {
@@ -27,3 +27,4 @@ async function getAllCaterers() {
 // Call the function to retrieve all caterers and export the data
 export const catererData = await getAllCaterers();
 console.log("catererData from Caterers.mjs: ", catererData)
+*/

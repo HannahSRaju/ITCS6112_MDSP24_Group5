@@ -1,4 +1,4 @@
-import axios from 'axios';
+/** import axios from 'axios';
 
 // Retrieve all documents in the samplePhotographers collection
 async function getAllPhotographers() {
@@ -27,3 +27,4 @@ async function getAllPhotographers() {
 // Retrieve and export all photographers' data
 export const photographerData = await getAllPhotographers();
 console.log("photographerData: ", photographerData);
+*/

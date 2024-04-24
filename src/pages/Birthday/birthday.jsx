@@ -2,19 +2,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { birthdayBKG, photographer, venue, florist, planner, caterer } from "../../utils/images";
 import "./birthday.css";
-import { venueData } from "./Venues.mjs";
-import { catererData } from "./Caterers.mjs";
-import { floristData } from "./Florists.mjs";
+import { venueData } from "./VenuesB.mjs";
+import { bakerData } from "./BakersB.mjs";
+import { decoratorData } from "./DecoratorsB.mjs"; // Updated import
 import { photographerData } from "./Photographers.mjs";
-import { plannerData } from "./Planners.mjs";
+//import { plannerData } from "./Planners.mjs";
 
 const Birthday = () => {
     // Convert objects to arrays
     const venuesArray = Object.values(venueData);
-    const caterersArray = Object.values(catererData);
-    const floristsArray = Object.values(floristData);
+    const bakersArray = Object.values(bakerData);
+    const decoratorsArray = Object.values(decoratorData); // Updated variable name
     const photographersArray = Object.values(photographerData);
-    const plannersArray = Object.values(plannerData);
+    //const plannersArray = Object.values(plannerData);
 
     return (
         <div className="birthday-container">
@@ -35,7 +35,7 @@ const Birthday = () => {
                             <h3>{venue.VenueName}</h3>
                             <p>Location: {venue.Location}</p>
                             <p>Guest Capacity: {venue.GuestCapacity}</p>
-                            <p>Service Type: {venue.ServiceType}</p>
+                            {/*<p>Service Type: {venue.ServiceType}</p>*/}
                             <p>Starting Price: {venue.StartingPrice}</p>
                             <p>Contact: {venue.Contact}</p>
                             <p>Webpage: <a href={venue.Webpage}>{venue.Webpage}</a></p>
@@ -44,36 +44,36 @@ const Birthday = () => {
                     ))}
                 </div>
 
-                {/* Caterers */}
+                {/* Bakers */}
                 <div className="list-item" style={{ backgroundImage: `url(${caterer})` }}>
-                    <p className="category-title">Caterers</p>
+                    <p className="category-title">Bakers</p>
                 </div>
                 <div className="vendor-details">
-                    {caterersArray.map((caterer, index) => (
+                    {bakersArray.map((baker, index) => (
                         <div key={index} className="vendor-item">
-                            <h3>{caterer.CatererName}</h3>
-                            <p>Location: {caterer.Location}</p>
-                            <p>Starting Price: {caterer.StartingPrice}</p>
-                            <p>Contact: {caterer.Contact}</p>
-                            <p>Webpage: <a href={caterer.Webpage}>{caterer.Webpage}</a></p>
-                            <p>Review: {caterer.Review}</p>
+                            <h3>{baker.BakerName}</h3>
+                            <p>Location: {baker.Location}</p>
+                            <p>Starting Price: {baker.StartingPrice}</p>
+                            <p>Contact: {baker.Contact}</p>
+                            <p>Webpage: <a href={baker.Webpage}>{baker.Webpage}</a></p>
+                            <p>Review: {baker.Review}</p>
                         </div>
                     ))}
                 </div>
 
-                {/* Florists */}
+                {/* Decorators */}
                 <div className="list-item" style={{ backgroundImage: `url(${florist})` }}>
-                    <p className="category-title">Florists</p>
+                    <p className="category-title">Decorators</p>
                 </div>
                 <div className="vendor-details">
-                    {floristsArray.map((florist, index) => (
+                    {decoratorsArray.map((decorator, index) => (
                         <div key={index} className="vendor-item">
-                            <h3>{florist.FloristName}</h3>
-                            <p>Location: {florist.Location}</p>
-                            <p>Starting Price: {florist.StartingPrice}</p>
-                            <p>Contact: {florist.Contact}</p>
-                            <p>Webpage: <a href={florist.Webpage}>{florist.Webpage}</a></p>
-                            <p>Review: {florist.Review}</p>
+                            <h3>{decorator.BakerName}</h3> {/* Assuming BakerName is a typo and should be DecoratorName */}
+                            <p>Location: {decorator.Location}</p>
+                            <p>Starting Price: {decorator.StartingPrice}</p>
+                            <p>Contact: {decorator.Contact}</p>
+                            <p>Webpage: <a href={decorator.Webpage}>{decorator.Webpage}</a></p>
+                            <p>Review: {decorator.Review}</p>
                         </div>
                     ))}
                 </div>
@@ -95,8 +95,9 @@ const Birthday = () => {
                         </div>
                     ))}
                 </div>
-
-                {/* Planners */}
+                
+                {/*
+                Planners
                 <div className="list-item" style={{ backgroundImage: `url(${planner})` }}>
                     <p className="category-title">Planners</p>
                 </div>
@@ -112,83 +113,11 @@ const Birthday = () => {
                             <p>Review: {planner.Review}</p>
                         </div>
                     ))}
-                </div>
+                </div> 
+                */}
             </div>
         </div>
     );
 };
 
 export default Birthday;
-
-/** import React, { useContext, useEffect, useState } from "react";
-import Button from "../../components/Button/Button";
-import { Link, useNavigate } from "react-router-dom";
-import MaterialIcons from "../../components/MaterialIcons";
-import { birthdayBKG, photographer, venue, florist, planner,caterer } from "../../utils/images";
-import "./birthday.css";
-
-const Birthday = () => {
-	const navigate = useNavigate();
-
-	return (
-		<div style={{position: 'relative'}}>
-			<div
-				style={{
-					backgroundImage: `url(${birthdayBKG})`,
-					backgroundSize: "cover",
-					opacity: "0.3",
-					position: "absolute",
-					top: "0",
-					left: "0",
-					width: "100%",
-					height: "100%",
-					zIndex: -1,
-				}}
-			></div>
-			<div className="blockss">
-				<li
-					className="list-item"
-					style={{
-						backgroundImage: `url(${venue})`,
-					}}
-				>
-					<p style={{backgroundColor: 'white', padding: '20px'}}>Venues</p>
-				</li>
-				<li
-					className="list-item"
-					style={{
-						backgroundImage: `url(${caterer})`,
-					}}
-				>
-					<p style={{backgroundColor: 'white', padding: '20px'}}>Caterers</p>
-				</li>
-				<li
-					className="list-item"
-					style={{
-						backgroundImage: `url(${florist})`,
-					}}
-				>
-					<p style={{backgroundColor: 'white', padding: '20px'}}>Florists</p>
-				</li>
-				<li
-					className="list-item"
-					style={{
-						backgroundImage: `url(${photographer})`,
-					}}
-				>
-					<p style={{backgroundColor: 'white', padding: '20px'}}>Photographers</p>
-				</li>
-				<li
-					className="list-item"
-					style={{
-						backgroundImage: `url(${planner})`,
-					}}
-				>
-					<p style={{backgroundColor: 'white', padding: '20px'}}>Planners</p>
-				</li>
-			</div>
-		</div>
-	);
-};
-
-export default Birthday; */

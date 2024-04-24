@@ -1,4 +1,4 @@
-import axios from 'axios';
+/** import axios from 'axios';
 
 // Retrieve all documents in the samplePlanners collection
 async function getAllPlanners() {
@@ -27,3 +27,4 @@ async function getAllPlanners() {
 // Retrieve and export all planners' data
 export const plannerData = await getAllPlanners();
 console.log("plannerData: ", plannerData);
+*/

@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-// Retrieve all documents in the sampleFlorists collection
-async function getAllFlorists() {
+// Retrieve all documents in the sampleVenues collection
+async function getAllVenues() {
   try {
     const response = await axios.post('https://cors-anywhere-ssdi-dd15c12999fc.herokuapp.com/https://us-east-1.aws.data.mongodb-api.com/app/data-qtphn/endpoint/data/v1/action/find', {
-      collection: "sampleFlorists",
-      database: "sampleVendors",
+      collection: "BirthdayVenues",
+      database: "Vendors",
       dataSource: "ClusterHR",
       projection: {}
     }, {
@@ -16,14 +16,14 @@ async function getAllFlorists() {
       }
     });
 
-    //console.log("All florists:", response.data); // Log all florists data
-    return response.data.documents; // Return the florists documents
+    //console.log("All venues:", response.data); // Log the response containing all documents
+    return response.data.documents; // Return the venues documents
   } catch (error) {
-    console.error("Error retrieving florists:", error);
+    console.error("Error retrieving venues:", error);
     return []; // Return an empty array if error occurs
   }
 }
 
-// Retrieve and export all florists' data
-export const floristData = await getAllFlorists();
-console.log("floristData: ", floristData);
+// Retrieve and export all venues' data
+export const venueData = await getAllVenues();
+console.log("venueData: ", venueData);

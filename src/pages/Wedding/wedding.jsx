@@ -1,19 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { venueData } from "./VenuesW.mjs";
-import { catererData } from "./CaterersW.mjs";
-import { floristData } from "./FloristsW.mjs";
-import { photographerData } from "./PhotographersW.mjs";
-import { plannerData } from "./PlannersW.mjs";
+//import { venueData } from "./VenuesW.mjs";
+//import { catererData } from "./CaterersW.mjs";
+//import { floristData } from "./FloristsW.mjs";
+//import { photographerData } from "./PhotographersW.mjs";
+//import { plannerData } from "./PlannersW.mjs";
 import { venue, caterer, florist, photographer, planner } from "../../utils/images";
 import "./wedding.css";
 
 const Venues = () => {
-    const venuesArray = Object.values(venueData);
+    /**const venuesArray = Object.values(venueData);
     const caterersArray = Object.values(catererData);
     const floristsArray = Object.values(floristData);
     const photographersArray = Object.values(photographerData);
-    const plannersArray = Object.values(plannerData);
+    const plannersArray = Object.values(plannerData);*/
 
     return (
         <div className="wedding-container">
