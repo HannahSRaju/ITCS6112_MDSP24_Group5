@@ -5,7 +5,7 @@ import "./birthday.css";
 import { venueData } from "./VenuesB.mjs";
 import { bakerData } from "./BakersB.mjs";
 import { decoratorData } from "./DecoratorsB.mjs"; // Updated import
-import { photographerData } from "./Photographers.mjs";
+//import { photographerData } from "./Photographers.mjs";
 //import { plannerData } from "./Planners.mjs";
 
 const Birthday = () => {
@@ -13,7 +13,7 @@ const Birthday = () => {
     const venuesArray = Object.values(venueData);
     const bakersArray = Object.values(bakerData);
     const decoratorsArray = Object.values(decoratorData); // Updated variable name
-    const photographersArray = Object.values(photographerData);
+    //const photographersArray = Object.values(photographerData);
     //const plannersArray = Object.values(plannerData);
 
     return (
@@ -78,7 +78,7 @@ const Birthday = () => {
                     ))}
                 </div>
 
-                {/* Photographers */}
+                {/* Photographers 
                 <div className="list-item" style={{ backgroundImage: `url(${photographer})` }}>
                     <p className="category-title">Photographers</p>
                 </div>
@@ -95,8 +95,7 @@ const Birthday = () => {
                         </div>
                     ))}
                 </div>
-                
-                {/*
+
                 Planners
                 <div className="list-item" style={{ backgroundImage: `url(${planner})` }}>
                     <p className="category-title">Planners</p>
