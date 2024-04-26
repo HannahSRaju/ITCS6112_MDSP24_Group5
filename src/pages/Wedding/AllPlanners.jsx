@@ -5,54 +5,82 @@ import "./wedding.css";
 
 const Planners = () => {
     const [filterCriteria, setFilterCriteria] = useState({
-        plannerName: "",
-        location: "",
-        numServices: "",
-		startingPrice: "",
-		review: ""
+        PlannerName: "",
+        Location: "",
+        NumServices: "",
+		StartingPrice: "",
+		Review: ""
     });
 
     const plannersArray = Object.values(allPlannerData);
+    const [showFilters, setShowFilters] = useState(false);
 
     const handleFilterChange = (event) => {
         const { name, value } = event.target;
         setFilterCriteria({ ...filterCriteria, [name]: value });
     };
 
-    const applyFilter = (planner) => {
+	const applyFilter = (planner) => {
         for (let key in filterCriteria) {
-            if (filterCriteria[key] !== "" && planner[key].toLowerCase().indexOf(filterCriteria[key].toLowerCase()) === -1) {
-                return false;
-            }
+            if (filterCriteria[key] !== "") {
+			const plannerValue = planner[key]?.toString().toLowerCase(); // Convert to lowercase string
+				const filterValue = filterCriteria[key].toLowerCase();
+				if (key == 'PlannerName' || key == 'Location') {
+					if (!plannerValue || plannerValue.indexOf(filterValue) === -1) {
+						return false;
+					}
+				} else if (key == 'Review') {
+					let v = +plannerValue;
+					let f = +filterValue;
+					if (!plannerValue || v < f) {
+						return false;
+					}
+				}
+		}
         }
         return true;
     };
 
     return (
         <div className="wedding-container">
+			 {/* Filter section */}
+			 <div style={{
+				height: '30px',
+				display: 'flex',
+				justifyContent: 'right'
+			}}>
+				<button onClick={() => setShowFilters(!showFilters)} style={{
+					fontWeight: '600',
+					backgroundColor: 'cadetblue',
+					width: '10vw',
+					height: '30px'
+				}}>
+					Filters
+				</button>
+				{showFilters && (
+			 <div className="filter-section">
+                        <input type="text" name="PlannerName" placeholder="Planner Name" value={filterCriteria.PlannerName} onChange={handleFilterChange} />
+                        <input type="text" name="Location" placeholder="Location" value={filterCriteria.Location} onChange={handleFilterChange} />
+						<input type="text" name="Review" placeholder="Review" value={filterCriteria.Review} onChange={handleFilterChange} />
+                        {/* Add more inputs for other fields */}
+                        <button onClick={() => setFilterCriteria({
+                            PlannerName: "",
+                            Location: "",
+                            NumServices: "",
+							StartingPrice: "",
+							Review: ""
+                            // Reset other fields here
+                        })}>Reset</button>
+                    </div>
+					)}
+					</div>
             <div className="blockss">
                 {/* Planners */}
                 <div className="list-item" style={{ backgroundImage: `url(${planner})` }}>
                     <p className="category-title">Planners</p>
                 </div>
                 <div className="vendor-details">
-                    {/* Filter section */}
-                    <div className="filter-section">
-                        <input type="text" name="plannerName" placeholder="Planner Name" value={filterCriteria.plannerName} onChange={handleFilterChange} />
-                        <input type="text" name="location" placeholder="Location" value={filterCriteria.location} onChange={handleFilterChange} />
-                        <input type="text" name="numServices" placeholder="Number of Services" value={filterCriteria.numServices} onChange={handleFilterChange} />
-						<input type="text" name="startingPrice" placeholder="Starting Price" value={filterCriteria.startingPrice} onChange={handleFilterChange} />
-						<input type="text" name="review" placeholder="Review" value={filterCriteria.review} onChange={handleFilterChange} />
-                        {/* Add more inputs for other fields */}
-                        <button onClick={() => setFilterCriteria({
-                            plannerName: "",
-                            location: "",
-                            numServices: "",
-							startingPrice: "",
-							review: ""
-                            // Reset other fields here
-                        })}>Reset</button>
-                    </div>
+                   
                     {/* Planner details based on filter */}
                     {plannersArray.length > 0 ? (
                         plannersArray.filter(applyFilter).map((planner, index) => (

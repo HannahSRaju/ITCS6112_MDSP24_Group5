@@ -5,7 +5,7 @@ import "./wedding.css";
 
 const Photographers = () => {
     const [filterCriteria, setFilterCriteria] = useState({
-        PhotographerName: "",
+        Photographer: "",
         Location: "",
         Style: "",
 		StartingPrice: "",
@@ -25,8 +25,8 @@ const Photographers = () => {
             if (filterCriteria[key] !== "") {
 			const photographerValue = photographer[key]?.toString().toLowerCase(); // Convert to lowercase string
 				const filterValue = filterCriteria[key].toLowerCase();
-				if (key == 'PhotographerName' || key == 'Location') {
-					if (filterCriteria[key] !== "" && photographerValue.indexOf(filterValue) === -1) {
+				if (key == 'Photographer' || key == 'Location') {
+					if (!photographerValue || photographerValue.indexOf(filterValue) === -1) {
 						return false;
 					}
 				} else if (key == 'Review') {
@@ -59,12 +59,12 @@ const Photographers = () => {
 				</button>
 				{showFilters && (
 			 <div className="filter-section">
-                        <input type="text" name="PhotographerName" placeholder="Photographer Name" value={filterCriteria.PhotographerName} onChange={handleFilterChange} />
+                        <input type="text" name="Photographer" placeholder="Photographer Name" value={filterCriteria.Photographer} onChange={handleFilterChange} />
                         <input type="text" name="Location" placeholder="Location" value={filterCriteria.Location} onChange={handleFilterChange} />
 						<input type="text" name="Review" placeholder="Review" value={filterCriteria.Review} onChange={handleFilterChange} />
                         {/* Add more inputs for other fields */}
                         <button onClick={() => setFilterCriteria({
-                            PhotographerName: "",
+                            Photographer: "",
                             Location: "",
                             Style: "",
 							StartingPrice: "",

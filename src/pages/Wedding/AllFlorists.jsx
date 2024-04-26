@@ -25,7 +25,7 @@ const Florists = () => {
 			const floristValue = florist[key]?.toString().toLowerCase(); // Convert to lowercase string
 				const filterValue = filterCriteria[key].toLowerCase();
 				if (key == 'FloristName' || key == 'Location') {
-					if (filterCriteria[key] !== "" && floristValue.indexOf(filterValue) === -1) {
+					if (!floristValue || floristValue.indexOf(filterValue) === -1) {
 						return false;
 					}
 				} else if (key == 'Review') {
