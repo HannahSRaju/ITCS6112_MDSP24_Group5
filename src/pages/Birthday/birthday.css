@@ -32,10 +32,10 @@
     z-index: -1;
   }
   
-  .blockss-birth {
+  .blocks-birth {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
   }
   
   .list-item {

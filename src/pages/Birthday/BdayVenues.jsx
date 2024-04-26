@@ -1,18 +1,17 @@
 import React, { useState } from "react";
-import { allVenueData } from "./VenuesData.mjs";
+import { venueData } from "./VenuesB.mjs";
 import { filterImg, venue } from "../../utils/images";
-import "./wedding.css";
+import "./birthday.css";
 
-const Venues = () => {
+const BdayVenues = () => {
 	const [filterCriteria, setFilterCriteria] = useState({
 		VenueName: "",
 		Location: "",
 		GuestCapacity: "",
-		ServiceType: "",
 		Review: "",
 	});
 
-	const venuesArray = Object.values(allVenueData);
+	const venuesArray = Object.values(venueData);
 	const [showFilters, setShowFilters] = useState(false);
 
 	const handleFilterChange = (event) => {
@@ -27,8 +26,7 @@ const Venues = () => {
 				const filterValue = filterCriteria[key].toLowerCase();
 				if (
 					key === "VenueName" ||
-					key === "Location" ||
-					key === "ServiceType"
+					key === "Location"
 				) {
 					if (!venueValue || venueValue.indexOf(filterValue) === -1) {
 						return false;
@@ -57,7 +55,7 @@ const Venues = () => {
 	};
 
 	return (
-		<div className="birthday-container">
+		<div className="wedding-container">
 			{/* Filter section */}
 			<div
 				style={{
@@ -100,20 +98,6 @@ const Venues = () => {
 							value={filterCriteria.GuestCapacity}
 							onChange={handleFilterChange}
 						/>
-						<select
-							name="ServiceType"
-							value={filterCriteria.ServiceType}
-							onChange={handleSelectChange}
-						>
-							<option value="" disabled>
-								Select Service Type
-							</option>
-							<option value="All-inclusive">All-inclusive</option>
-							<option value="Limited Services">
-								Limited Services
-							</option>
-							<option value="Raw space">Raw space</option>
-						</select>
 						<input
 							type="text"
 							name="Review"
@@ -127,7 +111,6 @@ const Venues = () => {
 									VenueName: "",
 									Location: "",
 									GuestCapacity: "",
-									ServiceType: "",
 									StartingPrice: "",
 									Review: "",
 								})
@@ -151,14 +134,12 @@ const Venues = () => {
 					<p className="category-title">Venues</p>
 				</div>
 				<div className="vendor-details">
-					{/* Venue details based on filter */}
 					{venuesArray.length > 0 ? (
 						venuesArray.filter(applyFilter).map((venue, index) => (
 							<div key={index} className="vendor-item">
 								<h3>{venue.VenueName}</h3>
 								<p>Location: {venue.Location}</p>
 								<p>Guest Capacity: {venue.GuestCapacity}</p>
-								<p>Service Type: {venue.ServiceType}</p>
 								<p>Contact: {venue.Contact}</p>
 								<p>
 									Webpage:{" "}
@@ -177,4 +158,4 @@ const Venues = () => {
 	);
 };
 
-export default Venues;
+export default BdayVenues;

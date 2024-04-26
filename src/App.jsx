@@ -39,6 +39,10 @@ import Florists from "./pages/Wedding/AllFlorists";
 import Photographers from "./pages/Wedding/AllPhotographers";
 import Planners from "./pages/Wedding/AllPlanners";
 import Venues from "./pages/Wedding/AllVenues";
+import BdayVenues from "./pages/Birthday/BdayVenues";
+import BdayBakers from "./pages/Birthday/BdayBakers";
+import BdayDecorators from "./pages/Birthday/BdayDecorators";
+
 // Import Planners, Caterers, Florists, Photographers, and Venues components here
 
 const Wrapper = () => {
@@ -155,7 +159,7 @@ const Wrapper = () => {
 							<Events />
 						</PrivateRoute>
 					}
-				/> 
+				/>
 				<Route
 					path="/events/trash"
 					element={
@@ -229,11 +233,17 @@ const Wrapper = () => {
 					}
 				/>
 				{/* Add Planners, Caterers, Florists, Photographers, and Venues routes below */}
-				<Route path="/:event/AllPlanners" element={<Planners />} /> 
-				<Route path="/:event/AllCaterers" element={<Caterers />} />
-				<Route path="/:event/AllFlorists" element={<Florists />} />
-				<Route path="/:event/AllPhotographers" element={<Photographers />} />
-				<Route path="/:event/AllVenues" element={<Venues />} />
+				<Route path="/:event/planners" element={<Planners />} />
+				<Route path="/:event/caterers" element={<Caterers />} />
+				<Route path="/:event/florists" element={<Florists />} />
+				<Route
+					path="/:event/photographers"
+					element={<Photographers />}
+				/>
+				<Route path="/:event/venues" element={<Venues />} />
+				<Route path="/:event/bdayVenues" element={<BdayVenues />} />
+				<Route path="/:event/decorators" element={<BdayDecorators />} />
+				<Route path="/:event/bakers" element={<BdayBakers />} />
 				<Route path="/contact" element={<Contact />} />
 				<Route path="/settings" element={<Settings />} />
 				<Route path="*" element={<NotFound />} />
