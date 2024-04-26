@@ -229,11 +229,11 @@ const Wrapper = () => {
 					}
 				/>
 				{/* Add Planners, Caterers, Florists, Photographers, and Venues routes below */}
-				<Route path="/AllPlanners" element={<Planners />} /> 
-				<Route path="/AllCaterers" element={<Caterers />} />
-				<Route path="/AllFlorists" element={<Florists />} />
-				<Route path="/AllPhotographers" element={<Photographers />} />
-				<Route path="/AllVenues" element={<Venues />} />
+				<Route path="/:event/AllPlanners" element={<Planners />} /> 
+				<Route path="/:event/AllCaterers" element={<Caterers />} />
+				<Route path="/:event/AllFlorists" element={<Florists />} />
+				<Route path="/:event/AllPhotographers" element={<Photographers />} />
+				<Route path="/:event/AllVenues" element={<Venues />} />
 				<Route path="/contact" element={<Contact />} />
 				<Route path="/settings" element={<Settings />} />
 				<Route path="*" element={<NotFound />} />

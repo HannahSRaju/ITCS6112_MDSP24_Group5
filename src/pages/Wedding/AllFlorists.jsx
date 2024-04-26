@@ -42,6 +42,7 @@ const Florists = () => {
 
     return (
         <div className="wedding-container">
+                    {/* Filter section start*/}
 			<div style={{
 				height: '30px',
 				display: 'flex',
@@ -62,23 +63,22 @@ const Florists = () => {
 						<input type="text" name="Review" placeholder="Review" value={filterCriteria.Review} onChange={handleFilterChange} />
                         {/* Add more inputs for other fields */}
                         <button onClick={() => setFilterCriteria({
-                            floristName: "",
-                            location: "",
-                            startingPrice: "",
-							review: ""
+                            FloristName: "",
+                            Location: "",
+                            StartingPricetartingPrice: "",
+							Review: ""
                             // Reset other fields here
                         })}>Reset</button>
                     </div>
 					)}
 					</div>
+                    {/* Filter section end*/}
             <div className="blockss">
                 {/* Florists */}
                 <div className="list-item" style={{ backgroundImage: `url(${florist})` }}>
                     <p className="category-title">Florists</p>
                 </div>
                 <div className="vendor-details">
-                    {/* Filter section */}
-
                     {/* Florist details based on filter */}
                     {floristsArray.length > 0 ? (
                         floristsArray.filter(applyFilter).map((florist, index) => (

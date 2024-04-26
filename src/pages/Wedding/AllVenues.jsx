@@ -54,6 +54,7 @@ const Venues = () => {
 
     return (
         <div className="wedding-container">
+                    {/* Filter section */}
             <div style={{
                 height: '30px',
                 display: 'flex',
@@ -98,8 +99,6 @@ const Venues = () => {
                     <p className="category-title">Venues</p>
                 </div>
                 <div className="vendor-details">
-                    {/* Filter section */}
-
                     {/* Venue details based on filter */}
                     {venuesArray.length > 0 ? (
                         venuesArray.filter(applyFilter).map((venue, index) => (

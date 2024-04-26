@@ -41,6 +41,7 @@ const Caterers = () => {
 
     return (
         <div className="wedding-container">
+                    {/* Filter section start*/}
 			<div style={{
 				height: '30px',
 				display: 'flex',
@@ -69,14 +70,13 @@ const Caterers = () => {
                     </div>
 					)}
 					</div>
+                    {/* Filter section end*/}
             <div className="blockss">
                 {/* Caterers */}
                 <div className="list-item" style={{ backgroundImage: `url(${caterer})` }}>
                     <p className="category-title">Caterers</p>
                 </div>
                 <div className="vendor-details">
-                    {/* Filter section */}
-                   
                     {/* Caterer details based on filter */}
                     {caterersArray.length > 0 ? (
                         caterersArray.filter(applyFilter).map((caterer, index) => (
