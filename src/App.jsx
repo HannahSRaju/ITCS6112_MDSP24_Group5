@@ -42,6 +42,8 @@ import Venues from "./pages/Wedding/AllVenues";
 import BdayVenues from "./pages/Birthday/BdayVenues";
 import BdayBakers from "./pages/Birthday/BdayBakers";
 import BdayDecorators from "./pages/Birthday/BdayDecorators";
+import Sports from "./pages/Sports/sports";
+import Corporate from "./pages/Corporate/corporate";
 
 // Import Planners, Caterers, Florists, Photographers, and Venues components here
 
@@ -141,8 +143,8 @@ const Wrapper = () => {
 				<Route path="/calendar" element={<Calendar />} />
 				<Route path="/wedding" element={<Wedding />} />
 				<Route path="/birthday" element={<Birthday />} />
-				{/* <Route path="/sports" element={<Sports />} /> */}
-				{/* <Route path="/corporate" element={<Corporate />} /> */}
+				<Route path="/sports" element={<Sports />} /> 
+				<Route path="/corporate" element={<Corporate />} /> 
 
 				<Route
 					path="/profile"
