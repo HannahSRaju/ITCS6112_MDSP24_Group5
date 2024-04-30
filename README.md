@@ -44,6 +44,21 @@ Event Planner is a centralized platform designed to streamline event organizatio
 <p align="center">
 <img src="images\wedding3.png" alt="wedding" style="width: 75%" />
 </p>
+<p align="center">
+<img src="images\wvenues.png" alt="wedding" style="width: 75%" />
+</p>
+<p align="center">
+<img src="images\wcaterers.png" alt="wedding" style="width: 75%" />
+</p>
+<p align="center">
+<img src="images\wflorists.png" alt="wedding" style="width: 75%" />
+</p>
+<p align="center">
+<img src="images\wphoto.png" alt="wedding" style="width: 75%" />
+</p>
+<p align="center">
+<img src="images\wplan.png" alt="wedding" style="width: 75%" />
+</p>
 
 -   **Birthday** - Use Event Planner's birthday section to browse through the vendors necessary for planning your birthday (venue, baker, decorator).
 <p align="center">
@@ -52,6 +67,26 @@ Event Planner is a centralized platform designed to streamline event organizatio
 <p align="center">
 <img src="images\bday2.png" alt="bday" style="width: 75%" />
 </p>
+<p align="center">
+<img src="images\bvenues.png" alt="bday" style="width: 75%" />
+</p>
+<p align="center">
+<img src="images\bbakers.png" alt="bday" style="width: 75%" />
+</p>
+<p align="center">
+<img src="images\bdecor.png" alt="bday" style="width: 75%" />
+</p>
+
+-   **Sports** - Use Event Planner's sports section for planning your sports event (coming soon).
+<p align="center">
+<img src="images\sports.png" alt="Sports" style="width: 75%" />
+</p>
+
+-   **Corporate** - Use Event Planner's Corporate section for planning your corporate event (coming soon).
+<p align="center">
+<img src="images\corporate.png" alt="Corporate" style="width: 75%" />
+</p>
+
 
 # Local Development
 
