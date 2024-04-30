@@ -1,10 +1,10 @@
 <p align="center">
-<img src="./images/favicon-192.png" alt="Planner Home Screen" />
+<img src="./images/event-plan.jpg" alt="Event Planner Home Screen" />
 </p>
 <h1 align="center">Planner</h1>
 <p align="center">
-Get more done with Planner.
-Manage, capture and edit your daily events, notes and tasks.
+Create memorable experiences with Event Planner.
+Manage, capture, and plan life's most special events.
 </p>
 
 	
@@ -14,7 +14,7 @@ Manage, capture and edit your daily events, notes and tasks.
 
 # Introduction
 
-Planner is a full stack web application built using MERN stack to keep a track of your activity. You can track it for every month, day, or even an hour.
+Event Planner is a centralized platform designed to streamline event organization. It offers tools for creating, managing, and customizing events, along with features for discovering and booking vendors, tracking tasks and budgets, and communicating with guests. With its user-friendly interface and comprehensive functionalities, the application simplifies the complexities of event planning, saving time and resources for organizers while ensuring a seamless experience for all stakeholders.
 
 -   **Runtime used for whole application** - [Node.js](https://nodejs.org/)
 -   **Frontend framework** - [React JS](https://reactjs.org/)
@@ -24,56 +24,41 @@ Planner is a full stack web application built using MERN stack to keep a track o
 
 # Navigation
 
--   **Home Page** - Planner's Home page contains links for different pages of the web app.
+-   **Home Page** - Event Planner's Home page contains a link for different pages of the web app.
 
--   **Calendar** - Planner contains a calendar which helps us visualize the days of any month of any year, withour any year limit. Unlike other calendars, our Planner works on an algorithm.
+-   **Events** - In the events section, you can navigate to the event category tile that you would like to start planning for. If you would like our Event Managers to plan the event for you, choose the first link found at the footer. If you have used the application before and want to leave a review, choose the second link at the footer.
 <p align="center">
-<img src="./src/images/help/0/0.png" alt="Calendar" style="width: 75%" />
+<img src="./src/images/event-tiles-page.png" alt="Events" style="width: 75%" />
+</p>
+<p align="center">
+<img src="./src/images/footer.png" alt="Events" style="width: 75%" />
 </p>
 
--   **Events** - In the events section of this Planner, you can create, edit and delete an event. For e.g: Create an event for your best friend's birthday and keep yourself reminded on the big day.
+-   **Wedding** - Use Event Planner's wedding section to browse through the vendors necessary for planning your wedding (venue, caterer, florist, photographer, planner).
 <p align="center">
-<img src="./src/images/help/1/0.png" alt="Events" style="width: 75%" />
+<img src="./src/images/wedding1.png" alt="Noets" style="width: 75%" />
+</p>
+<p align="center">
+<img src="./src/images/wedding2.png" alt="Noets" style="width: 75%" />
+</p>
+<p align="center">
+<img src="./src/images/wedding3.png" alt="Noets" style="width: 75%" />
 </p>
 
--   **Notes** - Use Planner's notes section to record every thought that you want to track. Whether it is an article you came across on the internet or a blog that you want to save for later or a short poem that you just wrote.
+-   **Birthday** - Use Event Planner's birthday section to browse through the vendors necessary for planning your birthday (venue, baker, decorator).
 <p align="center">
-<img src="./src/images/help/2/0.png" alt="Noets" style="width: 75%" />
+<img src="./src/images/bday1.png" alt="Noets" style="width: 75%" />
 </p>
-
--   **Tasks** - Use Planner's tasks section to keep track of your day-to-day activities. Create a task that would remind you to buy groceries, or a task that would prepare for an early test and schedule a meeting with your colleagues.
 <p align="center">
-<img src="./src/images/help/3/0.png" alt="Noets" style="width: 75%" />
+<img src="./src/images/bday2.png" alt="Noets" style="width: 75%" />
 </p>
-
--   **Help** - There is a help section available in the sidebar. Visit this section to understand more about Planner.
-
--   **Feedback** - Any appreciation of work or a bug report or any other kind of feedback is welcome. To drop a feedback for our developers, click on the feedback/report-a-bug button in the sidebar of the app. Please be polite in any kind of feedback. 
-
-# Themes
-
-Planner's color palette has been synchronized and carefully chosen to provide the best user experience.
-
-The app will switch to dark mode automatically after 8:00 PM and will switch back to light mode at 8:00 AM.
-
-Nevertheless, the user could override this option by switching between different modes as per their convenience.
-
-To switch between different modes, click on theme icon in the header.
-
--   **Light Mode**
-
-<img src="./src/images/PlannerNav/2b.png" alt="Dark Mode" style="margin: 2rem 7rem" />
-
--   **Dark Mode**
-
-<img src="./src/images/PlannerNav/2a.png" alt="Light Mode" style="margin: 2rem 7rem" />
 
 # Local Development
 
 - To clone copy the following command in your terminal and start development.
 
 ```sh
-git clone https://github.com/akshatmittal61/planner.git
+gh repo clone HannahSRaju/ITCS6112_MDSP24_Group5
 ```
 
 OR
@@ -141,6 +126,11 @@ This project is licensed under the terms of the [MIT License](https://github.com
 
 -   [Akshat Mittal](https://akshatmittal61.vercel.app/)
 -   [Sneha Sharma](https://snehasharma1111.github.io/)
+-   [Hannah Raju](https://www.linkedin.com/in/hannah-raju-33503b220/)
+-   [Alish Jain](https://www.linkedin.com/in/alishjain0102/)
+-   [Jinita Bhatt](https://www.linkedin.com/in/jinita-bhatt/)
+-   [Micheal Rawlings](https://www.linkedin.com/in/michealrawlings/)
+-   [Sach Denuwara](https://www.linkedin.com/in/sachdenuwara/)
 
 ## References and Libraries Used
 
