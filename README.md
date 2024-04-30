@@ -1,7 +1,7 @@
 <p align="center">
 <img src="./images/event-plan.jpg" alt="Event Planner Home Screen" />
 </p>
-<h1 align="center">Planner</h1>
+<h1 align="center">Event Planner</h1>
 <p align="center">
 Create memorable experiences with Event Planner.
 Manage, capture, and plan life's most special events.
