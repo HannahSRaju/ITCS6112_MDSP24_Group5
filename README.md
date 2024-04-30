@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./images/event-plan.jpg" alt="Event Planner Home Screen" />
+<img src="src\images\event-plan.jpg" alt="Event Planner Home Screen" />
 </p>
 <h1 align="center">Event Planner</h1>
 <p align="center">
