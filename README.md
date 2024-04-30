@@ -28,29 +28,29 @@ Event Planner is a centralized platform designed to streamline event organizatio
 
 -   **Events** - In the events section, you can navigate to the event category tile that you would like to start planning for. If you would like our Event Managers to plan the event for you, choose the first link found at the footer. If you have used the application before and want to leave a review, choose the second link at the footer.
 <p align="center">
-<img src="./src/images/event-tiles-page.png" alt="Events" style="width: 75%" />
+<img src="images\event-tiles-page.png" alt="Events" style="width: 75%" />
 </p>
 <p align="center">
-<img src="./src/images/footer.png" alt="Events" style="width: 75%" />
+<img src="images\footer.png" alt="Events" style="width: 75%" />
 </p>
 
 -   **Wedding** - Use Event Planner's wedding section to browse through the vendors necessary for planning your wedding (venue, caterer, florist, photographer, planner).
 <p align="center">
-<img src="./src/images/wedding1.png" alt="wedding" style="width: 75%" />
+<img src="images\wedding1.png" alt="wedding" style="width: 75%" />
 </p>
 <p align="center">
-<img src="./src/images/wedding2.png" alt="wedding" style="width: 75%" />
+<img src="images\wedding2.png" alt="wedding" style="width: 75%" />
 </p>
 <p align="center">
-<img src="./src/images/wedding3.png" alt="wedding" style="width: 75%" />
+<img src="images\wedding3.png" alt="wedding" style="width: 75%" />
 </p>
 
 -   **Birthday** - Use Event Planner's birthday section to browse through the vendors necessary for planning your birthday (venue, baker, decorator).
 <p align="center">
-<img src="./src/images/bday1.png" alt="bday" style="width: 75%" />
+<img src="images\bday1.png" alt="bday" style="width: 75%" />
 </p>
 <p align="center">
-<img src="./src/images/bday2.png" alt="bday" style="width: 75%" />
+<img src="images\bday2.png" alt="bday" style="width: 75%" />
 </p>
 
 # Local Development
