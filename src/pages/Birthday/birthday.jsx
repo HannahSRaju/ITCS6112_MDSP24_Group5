@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { venue, florist, caterer } from "../../utils/images";
+import { venue, baker, decorator, birthdayBKG } from "../../utils/images";
 import "./birthday.css";
 import { venueData } from "./VenuesB.mjs";
 import { bakerData } from "./BakersB.mjs";
@@ -14,6 +14,7 @@ const Birthday = () => {
 
 	return (
 		<div className="birthday-container">
+			<div className="background-image" style={{ backgroundImage: `url(${birthdayBKG})` }}></div>
 			<Link to="/birthday/bdayVenues">
 				<div className="blocks-birth">
 					{/* Venues */}
@@ -32,7 +33,7 @@ const Birthday = () => {
 					{/* Bakers */}
 					<div
 						className="list-item"
-						style={{ backgroundImage: `url(${caterer})` }}
+						style={{ backgroundImage: `url(${baker})` }}
 					>
 						<p className="category-title">Bakers</p>
 					</div>
@@ -44,7 +45,7 @@ const Birthday = () => {
 					{/* Decorators */}
 					<div
 						className="list-item"
-						style={{ backgroundImage: `url(${florist})` }}
+						style={{ backgroundImage: `url(${decorator})` }}
 					>
 						<p className="category-title">Decorators</p>
 					</div>

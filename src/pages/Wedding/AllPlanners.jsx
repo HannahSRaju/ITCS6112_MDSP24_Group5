@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { allPlannerData } from "./PlannersData.mjs";
-import { planner } from "../../utils/images";
+import { planner, vendorsWBKG } from "../../utils/images";
 import "./wedding.css";
 
 const Planners = () => {
@@ -42,7 +42,8 @@ const Planners = () => {
     };
 
     return (
-        <div className="wedding-container">
+        <div className="planner-container">
+            <div className="background-image" style={{ backgroundImage: `url(${vendorsWBKG})` }}></div>
 			 {/* Filter section */}
 			 <div style={{
 				height: '30px',

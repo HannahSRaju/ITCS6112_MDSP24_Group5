@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { decoratorData } from "./DecoratorsB.mjs";
 
-import { florist } from "../../utils/images";
+import { decorator, vendorsBBKG } from "../../utils/images";
 import "./birthday.css";
 
 const BdayDecorators = () => {
@@ -44,7 +44,8 @@ const BdayDecorators = () => {
 	};
 
 	return (
-		<div className="wedding-container">
+		<div className="decorator-container">
+			<div className="background-image" style={{ backgroundImage: `url(${vendorsBBKG})` }}></div>
 			{/* Filter section start*/}
 			<div
 				style={{
@@ -110,7 +111,7 @@ const BdayDecorators = () => {
 			<div className="blockss">
 				<div
 					className="list-item"
-					style={{ backgroundImage: `url(${florist})` }}
+					style={{ backgroundImage: `url(${decorator})` }}
 				>
 					<p className="category-title">Decorators</p>
 				</div>

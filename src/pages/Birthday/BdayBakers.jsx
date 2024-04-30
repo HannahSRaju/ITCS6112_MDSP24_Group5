@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { bakerData } from "./BakersB.mjs";
 
-import { caterer } from "../../utils/images";
+import { baker, vendorsBBKG } from "../../utils/images";
 import "./birthday.css";
 
 const BdayBakers = () => {
@@ -41,7 +41,8 @@ const BdayBakers = () => {
 	};
 
 	return (
-		<div className="wedding-container">
+		<div className="baker-container">
+			<div className="background-image" style={{ backgroundImage: `url(${vendorsBBKG})` }}></div>
 			{/* Filter section */}
 			<div
 				style={{
@@ -107,7 +108,7 @@ const BdayBakers = () => {
 				{/* Bakers */}
 				<div
 					className="list-item"
-					style={{ backgroundImage: `url(${caterer})` }}
+					style={{ backgroundImage: `url(${baker})` }}
 				>
 					<p className="category-title">Bakers</p>
 				</div>

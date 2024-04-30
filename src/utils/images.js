@@ -7,12 +7,17 @@ import oneBgImg from "../images/weddingBG.jpg";
 import sportsImg from "../images/sportsImg.jpg";
 import corporateImg from "../images/corporateImg.jpeg";
 import birthdayImg from "../images/birthdayImg.jpeg";
-import birthdayBKG from "../images/birthdayBKG.jpeg";
+import birthdayBKG from "../images/birthdayBKG.jpg";
 import photographer from "../images/photographer.jpeg";
-import venue from "../images/venue.jpeg";
+import venue from "../images/venue.png";
 import florist from "../images/florist.jpg";
-import caterer from "../images/caterer.jpeg";
+import caterer from "../images/caterer.jpg";
+import baker from "../images/baker.jpg";
+import decorator from "../images/decorator.jpg";
 import planner from "../images/planner.jpeg";
+import eventsBKG from "../images/eventsBKG.jpg";
+import vendorsWBKG from "../images/vendorsWBKG.jpg";
+import vendorsBBKG from "../images/vendorsBBKG.jpg";
 import weddingBKG from "../images/weddingBKG.jpg";
 
 
@@ -129,5 +134,10 @@ export {
 	caterer,
 	florist,
 	planner,
+	baker,
+	decorator,
+	eventsBKG,
+	vendorsWBKG,
+	vendorsBBKG,
 	weddingBKG
 };

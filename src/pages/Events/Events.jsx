@@ -8,7 +8,7 @@ import AddEvent from "./AddEvent";
 import Event from "./Event";
 import "./events.css";
 import { eventsNavLinks } from "../../utils/navigation";
-import { nullEvents } from "../../utils/images";
+import { nullEvents, eventsBKG } from "../../utils/images";
 
 const Events = () => {
 	const { events, setSideBarLinks } = useContext(GlobalContext);
@@ -57,15 +57,16 @@ const Events = () => {
 						<span>Events </span>
 					</section>
 					<section className="events-body">
+					<div className="background-image" style={{ backgroundImage: `url(${eventsBKG})` }}></div>
 						{
 							<div className="events-body-section">
 								<div className="events-body-section__body">
-										
-												<Col
-													
-												>
-													<Event/>
-												</Col>
+
+									<Col
+
+									>
+										<Event />
+									</Col>
 								</div>
 							</div>
 						}

@@ -12,12 +12,12 @@ const UserMenu = ({ close }) => {
 			title: "Sign In",
 			link: "/login",
 			icon: "login",
-		},
+		}/*,
 		{
 			title: "Sign Up",
 			link: "/register",
 			icon: "account_circle",
-		},
+		},*/
 	];
 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	const loggedIn = [

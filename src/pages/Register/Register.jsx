@@ -81,7 +81,7 @@ const Register = () => {
 		}
 	};
 	return (
-		<section
+		{/*<section
 			className="register"
 			style={{
 				backgroundImage: `url(${bricks})`,
@@ -176,14 +176,14 @@ const Register = () => {
 									/>
 								</Col>
 							</Row>
-							<div className="register-left-form-group">
+							{/*<div className="register-left-form-group">
 								<span></span>
 								<Button
 									type="submit"
 									text="Sign Up"
 									color="brown"
 								/>
-							</div>
+									</div>
 						</form>
 					</div>
 					<div className="register-left-bottom">
@@ -202,7 +202,7 @@ const Register = () => {
 					</button>
 				</div>
 			</div>
-		</section>
+		</section>*/}
 	);
 };
 

@@ -6,24 +6,28 @@ import {
 	florist,
 	photographer,
 	planner,
+	weddingBKG
 } from "../../utils/images";
 import "./wedding.css";
 
 const Wedding = () => {
 	return (
 		<div className="wedding-container">
-			<Link to="/wedding/venues">
-				<div className="blockss">
-					{/* Venues */}
-					<div
-						className="list-item"
-						style={{ backgroundImage: `url(${venue})` }}
-					>
-						<p className="category-title">Venues</p>
+			<div className="background-image" style={{ backgroundImage: `url(${weddingBKG})` }}></div>
+			<div className="content">
+				<Link to="/wedding/venues">
+					<div className="blockss">
+						{/* Venues */}
+						<div
+							className="list-item"
+							style={{ backgroundImage: `url(${venue})` }}
+						>
+							<p className="category-title">Venues</p>
+						</div>
+						<br />
 					</div>
-					<br />
-				</div>
-			</Link>
+				</Link>
+			</div>
 			<Link to="/wedding/caterers">
 				<div className="blockss">
 					{/* Caterers */}

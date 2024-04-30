@@ -110,10 +110,10 @@ const Login = () => {
 							</div>
 						</form>
 					</div>
-					<div className="login-left-bottom">
+					{/*<div className="login-left-bottom">
 						<span>Don't have an account? </span>
 						<Link to="/register">Sign Up</Link>
-					</div>
+		</div>*/}
 				</div>
 				<div
 					className="login-right"
