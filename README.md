@@ -166,6 +166,15 @@ This project is licensed under the terms of the [MIT License](https://github.com
 -   [Jinita Bhatt](https://www.linkedin.com/in/jinita-bhatt/)
 -   [Micheal Rawlings](https://www.linkedin.com/in/michealrawlings/)
 -   [Sach Denuwara](https://www.linkedin.com/in/sachdenuwara/)
+<p align="center">
+<img src="images\about1.png" alt="about" style="width: 75%" />
+</p>
+<p align="center">
+<img src="images\about2.png" alt="about" style="width: 75%" />
+</p>
+<p align="center">
+<img src="images\about3.png" alt="about" style="width: 75%" />
+</p>
 
 ## References and Libraries Used
 
