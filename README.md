@@ -36,21 +36,21 @@ Event Planner is a centralized platform designed to streamline event organizatio
 
 -   **Wedding** - Use Event Planner's wedding section to browse through the vendors necessary for planning your wedding (venue, caterer, florist, photographer, planner).
 <p align="center">
-<img src="./src/images/wedding1.png" alt="Noets" style="width: 75%" />
+<img src="./src/images/wedding1.png" alt="wedding" style="width: 75%" />
 </p>
 <p align="center">
-<img src="./src/images/wedding2.png" alt="Noets" style="width: 75%" />
+<img src="./src/images/wedding2.png" alt="wedding" style="width: 75%" />
 </p>
 <p align="center">
-<img src="./src/images/wedding3.png" alt="Noets" style="width: 75%" />
+<img src="./src/images/wedding3.png" alt="wedding" style="width: 75%" />
 </p>
 
 -   **Birthday** - Use Event Planner's birthday section to browse through the vendors necessary for planning your birthday (venue, baker, decorator).
 <p align="center">
-<img src="./src/images/bday1.png" alt="Noets" style="width: 75%" />
+<img src="./src/images/bday1.png" alt="bday" style="width: 75%" />
 </p>
 <p align="center">
-<img src="./src/images/bday2.png" alt="Noets" style="width: 75%" />
+<img src="./src/images/bday2.png" alt="bday" style="width: 75%" />
 </p>
 
 # Local Development
@@ -124,13 +124,13 @@ This project is licensed under the terms of the [MIT License](https://github.com
 
 # Author
 
--   [Akshat Mittal](https://akshatmittal61.vercel.app/)
--   [Sneha Sharma](https://snehasharma1111.github.io/)
 -   [Hannah Raju](https://www.linkedin.com/in/hannah-raju-33503b220/)
 -   [Alish Jain](https://www.linkedin.com/in/alishjain0102/)
 -   [Jinita Bhatt](https://www.linkedin.com/in/jinita-bhatt/)
 -   [Micheal Rawlings](https://www.linkedin.com/in/michealrawlings/)
 -   [Sach Denuwara](https://www.linkedin.com/in/sachdenuwara/)
+-   [Akshat Mittal](https://akshatmittal61.vercel.app/)
+-   [Sneha Sharma](https://snehasharma1111.github.io/)
 
 ## References and Libraries Used
 
