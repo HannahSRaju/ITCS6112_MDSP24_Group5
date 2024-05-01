@@ -190,10 +190,10 @@ This project is licensed under the terms of the [MIT License](https://github.com
 Architectural Overview: 
 In the early design stage, we assessed a classic MVC architecture in addition to taking serverless and microservices designs into account. Because of the robust separation of responsibilities, which makes testing, maintenance, and scaling easier within the confines of a single application deployment environment, MVC was chosen. While microservices necessitate intricate coordination among several autonomous services, Model-View-Controller (MVC) provides a simplified method that supports swift web application development and implementation cycles.
 
-Subsystem Architecture
-Under an MVC framework, the subsystem architecture is reduced to three main parts that operate together in the server-side environment of the web application:
-Model: This layer manages data logic and symbolizes the dynamic data structure of the program. It directly oversees the application's logic, rules, and data. Models for the Event Planner application comprise vendor information, event data, and event planning information.
-View: The View component is in charge of giving the user access to data in a certain format. It converts models into user-interactive UI components. This layer includes the structure and user interface for elements related to event management, vendor selection, and event planning.
+Subsystem Architecture: <br />
+Under an MVC framework, the subsystem architecture is reduced to three main parts that operate together in the server-side environment of the web application: <br />
+Model: This layer manages data logic and symbolizes the dynamic data structure of the program. It directly oversees the application's logic, rules, and data. Models for the Event Planner application comprise vendor information, event data, and event planning information.<br />
+View: The View component is in charge of giving the user access to data in a certain format. It converts models into user-interactive UI components. This layer includes the structure and user interface for elements related to event management, vendor selection, and event planning.<br />
 Controller: The Controller functions as a go-between for the Model and the View, handling all business logic and incoming requests, working with the Model component to alter data, and coordinating with the Views to produce the final product. For instance, the event management controller would be in charge of organizing the views for these operations in addition to generating, editing, and removing events.
 
 A UML package diagram is an ideal way to represent all the dependencies and relationships between the layers and components that constitute the application's architecture. Below is the breakdown of what each layer typically contains and their responsibilities in the system:
@@ -216,8 +216,8 @@ Model-View-Controller (MVC): Selected for its capacity to divide issues, making 
 Service-Oriented Architecture (SOA): Used at the application-generic layer to handle the requirement for efficient development processes and the ease of replacing or updating common services. It allows for the modularity and reuse of generic services throughout the application.
 Layered Architecture: Managing dependencies and interactions between the application and the system environment requires the use of layered architecture. By dividing the program into discrete layers with defined roles, it reduces complexity and improves security and maintainability.
 
-UML Package Diagram - 
+UML Package Diagram
 <p align="center">
-<img src="images\architecture.png" alt="about" style="width: 75%" />
+<img src="images\architecture.png" alt="architecture" style="width: 50%" width=250 height=650/>
 </p>
 
