@@ -184,3 +184,40 @@ This project is licensed under the terms of the [MIT License](https://github.com
 -   [Axios](https://axios-http.com/)
 -   [Moment](https://momentjs.com/)
 -   [EmailJS](https://www.emailjs.com/)
+
+## Model Explanation
+
+Architectural Overview: 
+In the early design stage, we assessed a classic MVC architecture in addition to taking serverless and microservices designs into account. Because of the robust separation of responsibilities, which makes testing, maintenance, and scaling easier within the confines of a single application deployment environment, MVC was chosen. While microservices necessitate intricate coordination among several autonomous services, Model-View-Controller (MVC) provides a simplified method that supports swift web application development and implementation cycles.
+
+Subsystem Architecture
+Under an MVC framework, the subsystem architecture is reduced to three main parts that operate together in the server-side environment of the web application:
+Model: This layer manages data logic and symbolizes the dynamic data structure of the program. It directly oversees the application's logic, rules, and data. Models for the Event Planner application comprise vendor information, event data, and event planning information.
+View: The View component is in charge of giving the user access to data in a certain format. It converts models into user-interactive UI components. This layer includes the structure and user interface for elements related to event management, vendor selection, and event planning.
+Controller: The Controller functions as a go-between for the Model and the View, handling all business logic and incoming requests, working with the Model component to alter data, and coordinating with the Views to produce the final product. For instance, the event management controller would be in charge of organizing the views for these operations in addition to generating, editing, and removing events.
+
+A UML package diagram is an ideal way to represent all the dependencies and relationships between the layers and components that constitute the application's architecture. Below is the breakdown of what each layer typically contains and their responsibilities in the system:
+
+Four Layers in a Subsystem Dependency Diagram
+1. Application-Specific Layer
+Responsibility: Includes the portions of the program that were specifically created for it and are exclusive to its domain. This covers unique controllers, views, models, services, and utilities required especially for the Event Planner program.
+Architectural Styles: Primarily influenced by MVC for separation of concerns—models handle the data logic, views manage the presentation logic, and controllers deal with application logic. The choice of MVC here addresses the need for maintainability, scalability, and clear separation between user interface and business logic.
+2. Application-Generic Layer
+Responsibility: Consists of general-purpose libraries and modules that are utilized across the application and are not particular to any one application domain. This might include utilities that offer cross-cutting functions, such as logging services, data validation, and authentication libraries.
+Architectural Styles: Makes frequent use of shared libraries or the concepts of service-oriented architecture (SOA), which promotes reuse and modularity. The architecture of this layer facilitates efficiency and minimizes redundancy by offering shared services and functions that the application-specific layer may utilize.
+3. Middleware Layer
+Responsibility: Acts as the intermediary layer that provides communication and data management services between the application and the operating system or network services. This includes web servers, application servers, message brokers, and database management systems.
+Architectural Styles: Often based on client-server and request-response patterns to support the application’s needs for data exchange, session management, and communication. Middleware abstraction facilitates scalability and integration by offering a uniform interface to diverse underlying technologies.
+4. System-Software Layer
+Responsibility: Comprises the operating systems, database servers, and network software that provide foundational services and resources for the application. This layer is responsible for managing hardware resources, data storage, and low-level network communications.
+Architectural Styles: Influenced by layered architecture, ensuring that higher-level layers abstract away the complexities of hardware and system software interactions. This separation ensures application portability and simplifies deployment across different environments.
+Architectural Styles Applied
+Model-View-Controller (MVC): Selected for its capacity to divide issues, making maintenance and scalability simpler. It facilitates a clear division between the backend functionality and the user interface and increases developer efficiency.
+Service-Oriented Architecture (SOA): Used at the application-generic layer to handle the requirement for efficient development processes and the ease of replacing or updating common services. It allows for the modularity and reuse of generic services throughout the application.
+Layered Architecture: Managing dependencies and interactions between the application and the system environment requires the use of layered architecture. By dividing the program into discrete layers with defined roles, it reduces complexity and improves security and maintainability.
+
+UML Package Diagram - 
+<p align="center">
+<img src="images\architecture.png" alt="about" style="width: 75%" />
+</p>
+
